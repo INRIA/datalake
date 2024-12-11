@@ -1,0 +1,5 @@
+/site/
+.obsidian
+.idea
+.DS_Store
+Writerside
