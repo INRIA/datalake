@@ -38,12 +38,16 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - fr
+  
   - awesome-pages
   - macros
-  - page-to-pdf:
-      disableOnServe: true
-      displayHeaderFooter: true
-      printBackground: true
-      exclude:
-        - "index.*"
+#  - page-to-pdf:
+#      disableOnServe: true
+#      displayHeaderFooter: true
+#      printBackground: true
+##      exclude:
+##        - "index.*"

@@ -1,6 +1,6 @@
 mkdocs==1.2.3
 mkdocs-material
-mkdocs-jupyter
+#mkdocs-jupyter
 mkdocs-macros-plugin
 mkdocs-exclude
 mkdocs-awesome-pages-plugin
