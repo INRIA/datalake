@@ -1,4 +1,4 @@
-name: Mkdocs
+name: Datalake
 on:
   workflow_dispatch:
   push:
