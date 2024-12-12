@@ -1,53 +1,62 @@
-site_name: Datalake DCIS
-use_directory_urls: false
-extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-theme:
-  name: material
-  # custom_dir: custom/ si on custemise l'affichage cf. Benoit
-  features:
-    - navigation.tabs
-#markdown_extensions:
-#  - admonition
-#  - abbr
-#  - attr_list
-#  - def_list
-#  - footnotes
-#  - meta
-#  - md_in_html
-#  - meta
-#  - toc:
-#      permalink: true
-#  - pymdownx.snippets
-#  - pymdownx.details
-#  - pymdownx.magiclink
-#  - pymdownx.tabbed
-#  - pymdownx.betterem:
-#      smart_enable: all
-#  - pymdownx.caret
-#  - pymdownx.mark
-#  - pymdownx.tilde
-#  - pymdownx.highlight
-#  - pymdownx.superfences
-#  - pymdownx.inlinehilite
-#  - pymdownx.keys
-#  - pymdownx.smartsymbols
-#  - pymdownx.arithmatex:
-#      generic: true
-#  - pymdownx.tasklist:
-#      custom_checkbox: true
-plugins:
-  - search:
-      lang:
-        - en
-        - fr
-  
-  - awesome-pages
-  - macros
-#  - page-to-pdf:
-#      disableOnServe: true
-#      displayHeaderFooter: true
-#      printBackground: true
-##      exclude:
-##        - "index.*"
+name: Datalake
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Étape 1 : Vérification du code source
+      - uses: actions/checkout@v2
+
+      # Étape 2 : Configuration de Python
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      # Étape 3 : Installation des dépendances
+      - run: pip install -r requirements.txt
+
+      # Étape 4 : Déploiement avec MkDocs
+      - run: mkdocs gh-deploy --force
+
+      # Étape 5 : Passage à la branche `gh-pages`
+      - run: git checkout gh-pages
+
+      # Étape 6 : Remplacement des URLs relatives par des URLs absolues
+      - name: Replace relative URLs
+        run: >
+          CI_PAGES_URL="https://$( cut -d '/' -f 1 <<< "$GITHUB_REPOSITORY" ).github.io/$( cut -d '/' -f 2 <<< "$GITHUB_REPOSITORY" )/" &&
+          for file in $(find * -name "*.html"); do
+            sed -i "s|<img \([^\\\>]*\)src=\"\([^\:]*\)\"|<img \1\src=\"$CI_PAGES_URL/$(dirname $file)/\2\"|g" $file;
+            sed -i "s|<iframe \([^\\\>]*\)src=\"\([^\:]*\)\"|<iframe \1\src=\"$CI_PAGES_URL/$(dirname $file)/\2\"|g" $file;
+            sed -i "s|<a \([^\\\>]*\)href=\"\([^#][^\:\"]*\)\"|<a \1\href=\"$CI_PAGES_URL/$(dirname $file)/\2\"|g" $file;
+          done
+
+      # Étape 7 : Commit et push des modifications
+      - run: git config user.email "jean-marc.hasenfratz@inria.fr" && git config user.name "Jean-Marc Hasenfratz" && git add . && git commit -m "Relative to absolute urls" && git push origin gh-pages
+
+      # Étape 8 : Envoi d'un email après le déploiement
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Déploiement terminé : ${{ github.repository }}"
+          body: |
+            Bonjour,
+
+            Le déploiement du site Datalake est terminé avec succès.
+
+            Accédez au site ici : https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+            Cordialement,
+            GitHub Actions
+          to: "votre_email@example.com"
+          from: "GitHub Actions <noreply@example.com>"
