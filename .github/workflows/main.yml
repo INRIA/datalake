@@ -1,5 +1,4 @@
 name: Datalake
-
 on:
   workflow_dispatch:
   push:
