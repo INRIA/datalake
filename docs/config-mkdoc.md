@@ -1,4 +1,4 @@
-# Configuration de MkDocs
+# Extensions MkDocs
 
 ## Extensions Markdown
 
@@ -43,3 +43,10 @@
 21. **pymdownx.superfences** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/superfences/" target="_blank" title="pymdownx.superfences">Documentation</a>
     - Gère de manière avancée les blocs de code.
 22. **pymdownx.inlinehilite** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/" target="_blank" title="pymdownx.inlinehilite">Documentation</a>
+    - Coloration syntaxique pour le code en ligne
+23. **pymdownx.smartsymbols** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/" target="_blank" title="pymdownx.smartsymbols">Documentation</a>
+    - Conversion automatique de symboles typographiques
+24. **pymdownx.arithmatex** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/" target="_blank" title="pymdownx.arithmatex">Documentation</a>
+    - Rendu des expressions mathématiques avec MathJax ou KaTeX
+25. **pymdownx.tasklist** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/" target="_blank" title="pymdownx.tasklist">Documentation</a>
+    - Listes de tâches avec cases à cocher personnalisées
