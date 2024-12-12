@@ -9,45 +9,48 @@ theme:
   features:
     - navigation.tabs
 markdown_extensions:
-  - admonition
-  - abbr
-  - attr_list
-  - def_list
-  - footnotes
-  - meta
-  - md_in_html
-  - meta
+  - admonition  # Blocs spéciaux pour les notes, avertissements, etc.
+  - abbr  # Gestion des abréviations avec infobulles explicatives
+  - attr_list  # Ajout d'attributs personnalisés aux éléments Markdown
+  - def_list  # Création de listes de définitions
+  - footnotes  # Insertion de notes de bas de page
+#  - meta  # Métadonnées au début des fichiers Markdown
+  - md_in_html  # Permet l'utilisation de Markdown à l'intérieur du HTML
+  - tables  # Améliore le rendu et les fonctionnalités des tableaux
   - toc:
-      permalink: true
-#  - pymdownx.snippets
-#  - pymdownx.details
-#  - pymdownx.magiclink
-#  - pymdownx.tabbed
-#  - pymdownx.betterem:
-#      smart_enable: all
-#  - pymdownx.caret
-#  - pymdownx.mark
-#  - pymdownx.tilde
-#  - pymdownx.highlight
-#  - pymdownx.superfences
-#  - pymdownx.inlinehilite
-#  - pymdownx.keys
-#  - pymdownx.smartsymbols
-#  - pymdownx.arithmatex:
-#      generic: true
-#  - pymdownx.tasklist:
-#      custom_checkbox: true
+      permalink: true  # Génère une table des matières avec des liens permanents
+  - pymdownx.snippets  # Inclusion de fragments de code externes
+  - pymdownx.details  # Blocs repliables pour masquer ou afficher du contenu
+  - pymdownx.magiclink  # Conversion automatique des URLs en liens
+  - pymdownx.tabbed  # Création d'onglets dans le contenu
+  - pymdownx.betterem:
+      smart_enable: all  # Amélioration de la détection des emphases (italique, gras)
+  - pymdownx.critic  # Gestion des révisions et suggestions dans le texte
+  - pymdownx.keys  # Affichage stylisé des touches de clavier
+  - pymdownx.caret  # Support pour le texte en exposant
+  - pymdownx.mark  # Mise en surbrillance du texte
+  - pymdownx.tilde  # Support pour le texte en indice
+  - pymdownx.highlight  # Mise en évidence du code avec coloration syntaxique
+  - pymdownx.superfences  # Gestion avancée des blocs de code
+  - pymdownx.inlinehilite  # Coloration syntaxique pour le code en ligne
+  - pymdownx.smartsymbols  # Conversion automatique de symboles typographiques
+  - pymdownx.blocks.caption  # Ajout de légendes aux blocs de contenu
+  - pymdownx.arithmatex:
+      generic: true  # Rendu des expressions mathématiques avec MathJax ou KaTeX
+  - pymdownx.tasklist:
+      custom_checkbox: true  # Listes de tâches avec cases à cocher personnalisées
+
 plugins:
   - search:
       lang:
         - en
-        - fr
+        - fr  # Plugin de recherche avec support pour l'anglais et le français
+  - awesome-pages  # Organisation avancée des pages
+  - macros  # Définition et utilisation de macros
 
-  - awesome-pages
-  - macros
-#  - page-to-pdf:
-#      disableOnServe: true
-#      displayHeaderFooter: true
-#      printBackground: true
-##      exclude:
-##        - "index.*"
+  - page-to-pdf:
+      disableOnServe: true
+      displayHeaderFooter: true
+      printBackground: true
+#      exclude:
+#        - "index.*"
