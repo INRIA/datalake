@@ -57,5 +57,5 @@ jobs:
 
             Cordialement,
             GitHub Actions
-          to: "votre_email@example.com"
+          to: "jean-marc.hasenfratz@inria.fr"
           from: "GitHub Actions <noreply@example.com>"
