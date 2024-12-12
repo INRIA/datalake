@@ -34,7 +34,6 @@ markdown_extensions:
   - pymdownx.superfences  # Gestion avancée des blocs de code
   - pymdownx.inlinehilite  # Coloration syntaxique pour le code en ligne
   - pymdownx.smartsymbols  # Conversion automatique de symboles typographiques
-  - pymdownx.blocks.caption  # Ajout de légendes aux blocs de contenu
   - pymdownx.arithmatex:
       generic: true  # Rendu des expressions mathématiques avec MathJax ou KaTeX
   - pymdownx.tasklist:
