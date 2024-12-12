@@ -8,17 +8,17 @@ theme:
   # custom_dir: custom/ si on custemise l'affichage cf. Benoit
   features:
     - navigation.tabs
-#markdown_extensions:
-#  - admonition
-#  - abbr
-#  - attr_list
-#  - def_list
-#  - footnotes
-#  - meta
-#  - md_in_html
-#  - meta
-#  - toc:
-#      permalink: true
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
 #  - pymdownx.snippets
 #  - pymdownx.details
 #  - pymdownx.magiclink
