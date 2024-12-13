@@ -92,3 +92,12 @@ vérifier le succès ou l'échec des différentes étapes. En cas de problème
 
 ## Debuguer le workflow
 
+![Action button](Images/2024-12-13_11-28-35.png){ width="400" }
+
+![build](Images/2024-12-13_11-37-06.png){ width="400" }
+
+![gh-pages](Images/2024-12-13_11-37-31.png){ width="400" }
+
+![see build details](Images/2024-12-13_11-38-08.png){ width="400" }
+
+![build details](Images/2024-12-13_11-38-30.png){ width="400" }
