@@ -1,6 +1,6 @@
 # Extensions MkDocs
 
-## Extensions Markdown
+## Principales extensions utilisées
 
 1. **admonition** : <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" target="_blank" title="admonition">Documentation</a>
     - Permet l'utilisation de blocs spéciaux pour les notes, avertissements, etc.
@@ -50,3 +50,9 @@
     - Rendu des expressions mathématiques avec MathJax ou KaTeX
 25. **pymdownx.tasklist** : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/" target="_blank" title="pymdownx.tasklist">Documentation</a>
     - Listes de tâches avec cases à cocher personnalisées
+
+
+&nbsp;
+
+!!! info inline end "Texte générés en partie par ChatGPT !"
+
