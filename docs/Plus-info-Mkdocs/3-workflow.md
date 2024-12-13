@@ -2,7 +2,7 @@
 
 ## Étapes de génération du portail
 
-2. **Push vers GitHub**
+1. **Push vers GitHub**
 
     Lorsque vous effectuez un `git push` vers une branche, les fichiers
 modifiés sont envoyés au dépôt distant. Cela déclenche les workflows
@@ -16,14 +16,14 @@ définis (par exemple, sur `push`).
 
 3. **Installation de l'environnement**
 
-    Dans un projet MkDocs, les étapes  incluent :
+    Dans un projet MkDocs, les étapes incluent :
 
       - Vérifier le code source en le clonant. 
       - Installer Python et les dépendances requises :
         - MkDocs et ses plugins (`mkdocs-material`, etc.).
         - Toute autre bibliothèque spécifiée dans le workflow.
 
-3. **Installation de l'environnement**
+4. **Installation de l'environnement**
 
     Dans un projet MkDocs, les étapes typiques incluent :
 
@@ -32,30 +32,30 @@ définis (par exemple, sur `push`).
         - MkDocs et ses plugins (`mkdocs-material`, etc.).
         - Toute autre bibliothèque spécifiée dans le workflow.
 
-4. **Génération des fichiers statiques**
+5. **Génération des fichiers statiques**
 
     Une fois l'environnement prêt, la commande `mkdocs build` est
    exécutée pour convertir les fichiers Markdown en pages HTML statiques, selon la configuration définie dans `mkdocs.yml`.
 
-5. **Déploiement sur GitHub Pages**
+6. **Déploiement sur GitHub Pages**
 
     Si la branche concernée est `main`, la commande `mkdocs gh-deploy` est exécutée :
 
        - Elle génère et pousse les fichiers HTML vers la branche `gh-pages`.
        - GitHub Pages sert automatiquement ces fichiers comme un site web.
 
-6. **Mise à jour du site**
+7. **Mise à jour du site**
 
     Après le déploiement sur `gh-pages`, le site hébergé sur GitHub Pages
    (par ex. `https://inria.github.io/datalake/`) est automatiquement mis à jour avec les dernières modifications.
 
-7. **Notification et suivi**
+8. **Notification et suivi**
 
     GitHub affiche les logs du workflow dans l'onglet **Actions**, où vous pouvez
    vérifier le succès ou l'échec des différentes étapes. En cas de problème
    (ex. : erreur de configuration), vous recevez une notification pour corriger et pousser une mise à jour.
 
-## Debuguer le workflow
+## Debugger le workflow
 
 ![Action button](Images/2024-12-13_11-28-35.png){ width="500" }
 
