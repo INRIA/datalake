@@ -45,6 +45,33 @@ docs/
 - Documentation du projet (hébergée sur GitHub Pages) : https://inria.github.io/datalake/
 - Actions (workflows CI/CD) : https://github.com/INRIA/datalake/actions
 
+## Faire tourner le serveur en local
+
+Il suffit de lancer :
+
+```
+mkdocs serve
+```
+et d'aller sur http://127.0.0.1:8000/
+
+```
+% mkdocs serve
+INFO    -  Building documentation...
+INFO    -  [macros] - No default module `main` found
+PDF rendering is disabled in serve mode
+NFO    -  [macros] - Config variables: ['extra', 'config', 'environment', 'plugin', 'git', 'macros', 'filters', 'filters_builtin']
+INFO    -  [macros] - Config macros: ['context', 'macros_info', 'now', 'fix_url']
+INFO    -  [macros] - Config filters: ['pretty', 'relative_url']
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.23 seconds
+INFO    -  [16:03:01] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [16:03:01] Serving on http://127.0.0.1:8000/
+
+
+```
+!!! Warning
+    Il est possible qu'il faille installer plein 
+    d"extensions avec `pip ou autre ;-)
 &nbsp;
 
 !!! info inline end "Texte générés en partie par ChatGPT !"
