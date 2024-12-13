@@ -8,6 +8,7 @@ theme:
   # custom_dir: custom/ si on custemise l'affichage cf. Benoit
   features:
     - navigation.expand
+  logo: assets/images/inr_logo_blanc.png
 markdown_extensions:
   - admonition  # Blocs spéciaux pour les notes, avertissements, etc.
   - abbr  # Gestion des abréviations avec infobulles explicatives
