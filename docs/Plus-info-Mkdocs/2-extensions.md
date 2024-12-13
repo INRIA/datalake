@@ -1,6 +1,6 @@
 # Extensions MkDocs
 
-## Principales extensions utilisées
+## Principales extensions installées
 
 1. **admonition** : <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" target="_blank" title="admonition">Documentation</a>
     - Permet l'utilisation de blocs spéciaux pour les notes, avertissements, etc.
