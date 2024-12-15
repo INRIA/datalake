@@ -18,4 +18,7 @@ L'un des principaux avantages d'un data lake est sa capacité à servir de plate
 6. [https://www.talend.com/fr/resources/guide-data-lake/](https://www.talend.com/fr/resources/guide-data-lake/)
 7. [https://datavalue-consulting.com/data-lake-definition/](https://datavalue-consulting.com/data-lake-definition/)
 8. [https://www.intelligence-artificielle-school.com/ecole/technologies/data-lake-definition-role-utilisation/](https://www.intelligence-artificielle-school.com/ecole/technologies/data-lake-definition-role-utilisation/)
-9. [https://www.oracle.com/fr/database/data-lake-definition/](https://www.oracle.com/fr/database/data-lake-definition/) 
+9. [https://www.oracle.com/fr/database/data-lake-definition/](https://www.oracle.com/fr/database/data-lake-definition/)
+
+
+toto
