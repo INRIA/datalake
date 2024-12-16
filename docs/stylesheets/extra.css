@@ -1,24 +1,6 @@
-/* Applique une ombre légère et un arrondi à toutes les images du site */
-img {
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    border-radius: 10px; /* Coins arrondis */
-}
-
-/* Supprime l'ombre et l'arrondi uniquement pour l'icône du logo */
-.md-header__button.md-logo img {
-    box-shadow: none !important; /* Supprime l'ombre */
-    border-radius: 0 !important; /* Supprime l'arrondi */
-    background-color: transparent; /* Facultatif : assure que l'arrière-plan est transparent */
-}
-
-/* Change la couleur du bandeau */
-.md-header {
-    background-color: #C9191E !important; /* Rouge foncé */
-}
-
-/* Facultatif : ajuste la couleur du texte et des boutons pour un meilleur contraste */
-.md-header__title,
-.md-header__button,
-.md-header__button svg {
-    color: #ffffff !important; /* Texte blanc pour contraste */
-}
+:root {
+    --md-primary-fg-color:        #C9191E; /* Main primary color, used for key elements like links, buttons, and titles */
+    --md-primary-fg-color--light: #F36B6E; /* Lighter variant, used for hover states or light backgrounds */
+    --md-primary-fg-color--dark:  #8E1216; /* Darker variant, used for active states or in dark themes */
+  }
+  
