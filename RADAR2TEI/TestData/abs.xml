@@ -1,0 +1,2536 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../XSLT/RADAR2TEI.xsl"?>
+<raweb xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" year="2021">
+  <identification id="abs" isproject="true">
+    <shortname>ABS</shortname>
+    <projectName>Algorithms - Biology - Structure</projectName>
+    <theme-de-recherche>Computational Biology</theme-de-recherche>
+    <domaine-de-recherche>Digital Health, Biology and Earth</domaine-de-recherche>
+    <urlTeam>http://team.inria.fr/abs</urlTeam>
+    <header_dates_team>Creation of the Project-Team: 2008 July 01</header_dates_team>
+    <LeTypeProjet>Project-Team</LeTypeProjet>
+    <keywordsSdN>
+      <term>A2.5. - Software engineering</term>
+      <term>A3.3.2. - Data mining</term>
+      <term>A3.4.1. - Supervised learning</term>
+      <term>A3.4.2. - Unsupervised learning</term>
+      <term>A6.1.4. - Multiscale modeling</term>
+      <term>A6.2.4. - Statistical methods</term>
+      <term>A6.2.8. - Computational geometry and meshes</term>
+      <term>A8.1. - Discrete mathematics, combinatorics</term>
+      <term>A8.3. - Geometry, Topology</term>
+      <term>A8.7. - Graph theory</term>
+      <term>A9.2. - Machine learning</term>
+    </keywordsSdN>
+    <keywordsSecteurs>
+      <term>B1.1.1. - Structural biology</term>
+      <term>B1.1.5. - Immunology</term>
+      <term>B1.1.7. - Bioinformatics</term>
+    </keywordsSecteurs>
+    <UR name="Sophia"/>
+  </identification>
+  <team id="ABS-RA-2021-cid1">
+    <person>
+      <firstname>Frédéric</firstname>
+      <lastname>Cazals</lastname>
+      <categoryPro>Chercheur</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Team leader, Inria, Senior Researcher</moreinfo>
+      <hdr>oui</hdr>
+    </person>
+    <person>
+      <firstname>Dorian</firstname>
+      <lastname>Mazauric</lastname>
+      <categoryPro>Chercheur</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, Researcher</moreinfo>
+      <hdr>oui</hdr>
+    </person>
+    <person>
+      <firstname>Edoardo</firstname>
+      <lastname>Sarti</lastname>
+      <categoryPro>Chercheur</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, Researcher, from Oct 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Vladimir</firstname>
+      <lastname>Krajnak</lastname>
+      <categoryPro>PostDoc</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, from Oct 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Timothee</firstname>
+      <lastname>O Donnell</lastname>
+      <categoryPro>PhD</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria</moreinfo>
+    </person>
+    <person>
+      <firstname>Louis</firstname>
+      <lastname>Goldenberg</lastname>
+      <categoryPro>Stagiaire</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, from Mar 2021 until Aug 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Aarushi</firstname>
+      <lastname>Gupta</lastname>
+      <categoryPro>Stagiaire</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, from May 2021 until Aug 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Valentin</firstname>
+      <lastname>Madelaine</lastname>
+      <categoryPro>Stagiaire</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria, until Mar 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Maximilien</firstname>
+      <lastname>Martin</lastname>
+      <categoryPro>Stagiaire</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>École Normale Supérieure de Lyon, from Oct 2021</moreinfo>
+    </person>
+    <person>
+      <firstname>Florence</firstname>
+      <lastname>Barbara</lastname>
+      <categoryPro>Assistant</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Inria</moreinfo>
+    </person>
+    <person>
+      <firstname>Charles</firstname>
+      <lastname>Robert</lastname>
+      <categoryPro>CollaborateurExterieur</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>CNRS</moreinfo>
+      <hdr>oui</hdr>
+    </person>
+    <person>
+      <firstname>Konstantin</firstname>
+      <lastname>Roeder</lastname>
+      <categoryPro>CollaborateurExterieur</categoryPro>
+      <research-centre>Sophia</research-centre>
+      <moreinfo>Robinson College - Cambridge</moreinfo>
+    </person>
+  </team>
+  <presentation id="ABS-RA-2021-cid2">
+    <bodyTitle>Overall objectives</bodyTitle>
+    <subsection id="ABS-RA-2021-uid1" level="1">
+      <bodyTitle>Biomolecules and their function(s).</bodyTitle>
+      <p> Computational Structural Biology (CSB) is the scientific domain concerned with the development of algorithms
+        and software to understand and predict the structure and function of biological macromolecules. This research
+        field is inherently multi-disciplinary. On the experimental side, biology and medicine provide the objects
+        studied, while biophysics and bioinformatics supply experimental data, which are of two main kinds. On the one
+        hand, genome sequencing projects give supply protein sequences, and ~200 millions of sequences have been
+        archived in <hi rend="tt">UniProtKB</hi>/<hi rend="tt">TrEMBL</hi> – which collects the protein sequences
+        yielded by genome sequencing projects. On the other hand, structure determination experiments (notably X-ray
+        crystallography, nuclear magnetic resonance, and cryo-electron microscopy) give access to geometric models of
+        molecules – atomic coordinates. Alas, only ~150,000 structures have been solved and deposited in the Protein
+        Data Bank (PDB), a number to be compared against the <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mrow><mo>∼</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math></formula> sequences found in <hi rend="tt"
+          >UniProtKB</hi>/<hi rend="tt">TrEMBL</hi>. With one structure for ~1000 sequences, we hardly know anything
+        about biological functions at the atomic/structural level. Complementing experiments, physical
+        chemistry/chemical physics supply the required models (energies, thermodynamics, etc). More specifically, let us
+        recall that proteins with <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>n</mi></math></formula> atoms has <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mrow><mi>d</mi><mo>=</mo><mn>3</mn><mi>n</mi></mrow></math></formula> Cartesian coordinates, and fixing
+        these (up to rigid motions) defines a conformation. As conveyed by the iconic <hi rend="it">lock-and-key</hi>
+        metaphor for interacting molecules, Biology is based on the interactions stable conformations make with each
+        other. Turning these intuitive notions into quantitative ones requires delving into statistical physics, as
+        macroscopic properties are average properties computed over ensembles of conformations. Developing effective
+        algorithms to perform accurate simulations is especially challenging for two main reasons. The first one is the
+        high dimension of conformational spaces – see <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mrow><mi>d</mi><mo>=</mo><mn>3</mn><mi>n</mi></mrow></math></formula> above, typically several tens of
+        thousands, and the non linearity of the energy functionals used. The second one is the multiscale nature of the
+        phenomena studied: with biologically relevant time scales beyond the millisecond, and atomic vibrations periods
+        of the order of femto-seconds, simulating such phenomena typically requires <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mrow><mo>≫</mo><msup><mn>10</mn><mn>12</mn></msup></mrow></math></formula> conformations/frames, a (brute)
+          <hi rend="it">tour de force</hi> rarely achieved  <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_shaw2010atomic"/>.</p>
+      <p/>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid2" level="1">
+      <bodyTitle>Computational Structural Biology: three main challenges.</bodyTitle>
+      <p> The first challenge, <hi rend="it">sequence-to-structure prediction</hi>, aims to infer the possible
+        structure(s) of a protein from its amino acid sequence. While recent progress has been made recently using in
+        particular deep learning techniques <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_senior2020improved"/>, the models obtained so far
+        are static and coarse-grained.</p>
+      <p>The second one is <hi rend="it">protein function prediction</hi>. Given a protein with known structure <hi
+          rend="it">i.e.</hi> 3D coordinates, the goal is to predict the partners of this protein, in terms of stability
+        and specificity. This understanding is fundamental to biology and medicine, as illustrated by the example of the
+        SARS-CoV-2 virus responsible of the Covid19 pandemic. To infect a host, the virus first fuses its envelope with
+        the membrane of a target cell, and then injects its genetic material into that cell. Fusion is achieved by a
+        so-called class I fusion protein, also found in other viruses (influenza, SARS-CoV-1, HIV, etc). The fusion
+        process is a highly dynamic process involving large amplitude conformational changes of the molecules. It is
+        poorly understood, which hinders our ability to design therapeutics to block it.</p>
+      <object id="fig-1">
+        <table>
+          <tr>
+            <td>
+              <ressource xlink:href="WEB_IMG/baker-miniproteins-against-RBD-science-2020-montage-cropped.png"
+                type="figure" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest" media="WEB"/>
+            </td>
+          </tr>
+        </table>
+        <caption>Figure 1: <hi rend="bold">The synergy modeling - experiments, and challenges faced in CSB: illustration
+            on the problem of designing miniproteins blocking the entry of SARS-CoV-2 into cells. From <ref
+              location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+              xlink:href="#ABS-RA-2021_bibitem_cao2020novo"/>.</hi> Of note: the first step of the infection by
+          SARS-CoV-2 is the attachment of its receptor binding domain of its spike (RBD, blue molecule), to a target
+          protein found on the membrane of our cells, ACE2 (orange molecule). A strategy to block infection is therefore
+          to engineer a molecule binding the RBD, preventing its attachment to ACE2. <hi rend="bold">(A)</hi> Design of
+          a helical protein (orange) mimicking a region of the ACE2 protein. <hi rend="bold">(B)</hi> Assessment of
+          binding modes (conformation, binding energies) of candidate miniproteins neutralizing the RBD.</caption>
+      </object>
+      <p>Finally, the third one, <hi rend="it">large assembly reconstruction</hi>, aims at solving (coarse-grain)
+        structures of molecular machines involving tens or even hundreds of subunits. This research vein was promoted
+        about 15 years back by the work on the nuclear pore complex <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_aal-manpc-07"/>. It is often
+        referred to as <hi rend="it">reconstruction by data integration</hi>, as it necessitates to combine coarse-grain
+        models (notably from cryo-electron microscopy (cryo-EM) and native mass spectrometry) with atomic models of
+        subunits obtained from X ray crystallography. Fitting the latter into the former requires exploring the
+        conformation space of subunits, whence the importance of protein dynamics.</p>
+      <p>As an illustration of these three challenges, consider the problem of designing proteins blocking the entry of
+        SARS-CoV-2 into our cells (Fig. <ref location="intern" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_label_fig-fig-baker"/>). The first challenge is illustrated
+        by the problem of predicting the structure of a blocker protein from its sequence of amino-acids – a tractable
+        problem here since the mini proteins used only comprise of the order of 50 amino-acids (Fig. <ref
+          location="intern" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_label_fig-fig-baker"/>(A), <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_cao2020novo"/>). The second
+        challenge is illustrated by the calculation of the binding modes and the binding affinity of the designed
+        proteins for the RBD of SARS-CoV-2 (Fig. <ref location="intern" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_label_fig-fig-baker"/>(B)). Finally, the last challenge is
+        illustrated by the problem of solving structures of the virus with a cell, to understand how many spikes are
+        involved in the fusion mechanism leading to infection. In <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_cao2020novo"/>, the promising
+        designs suggested by modeling have been assessed by an array of wet lab experiments (affinity measurements,
+        circular dichroism for thermal stability assessment, structure resolution by cryo-EM). The <hi rend="it"
+          >hyperstable</hi> minibinders identified provide starting points for SARS-CoV-2 therapeutics  <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_cao2020novo"/>. We note in passing that this is truly remarkable work, yet,
+        the designed proteins stem from a template (the <hi rend="it">bottom</hi> helix from ACE2), and are rather
+        small.</p>
+      <object id="fig-2">
+        <table>
+          <tr>
+            <td>
+              <ressource xlink:href="WEB_IMG/PEL-landscape-artistic-v1-montage-erc--copy.png" type="figure"
+                xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest" media="WEB"/>
+            </td>
+          </tr>
+        </table>
+        <caption>Figure 2: The main challenges of molecular simulation: Finding significant local minima of the energy
+          landscape, computing statistical weights of catchment basins by integrating Boltzmann's factor, and
+          identifying transitions. Practically, <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>d</mi><mo>&gt;</mo><mn>100</mn></mrow></math></formula>.</caption>
+      </object>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid5" level="1">
+      <bodyTitle>Protein dynamics: core CS - maths challenges.</bodyTitle>
+      <p>To present challenges in structural modeling, let us recall the following ingredients. First, a molecular model
+        with <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></formula> atoms
+        is parameterized over a conformational space <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝒳</mi></math></formula> of dimension <formula type="inline"
+            ><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mrow><mi>d</mi><mo>=</mo><mn>3</mn><mi>n</mi></mrow></math></formula> in Cartesian coordinates, or
+          <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><mrow><mi>d</mi><mo>=</mo><mn>3</mn><mi>n</mi><mo>-</mo><mn>6</mn></mrow></math></formula> in internal
+        coordinate–upon removing rigid motions, also called degree of freedom (<hi rend="it">d.o.f.</hi>). Second,
+        recall that the <hi rend="it">potential energy landscape</hi> (PEL) is the mapping <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mrow><mi>V</mi><mo>(</mo><mo>·</mo><mo>)</mo></mrow></math></formula> from <formula type="inline"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>ℝ</mi><mi>d</mi></msup></math></formula> to <formula
+          type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ℝ</mi></math></formula> providing a
+        potential energy for each conformation  <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_wales2003energy"/>, <ref location="biblio"
+          xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_schon2009prediction"/>. Example potential energies (PE) are <hi rend="tt"
+          >CHARMM</hi>, <hi rend="tt">AMBER</hi>, <hi rend="tt">MARTINI</hi>, etc. Such PE belong to the realm of
+        molecular mechanics, and implement atomic or coarse-grain models. They may embark a solvent model, either
+        explicit or implicit. Their definition requires a significant number of parameters (up to <formula type="inline"
+            ><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mrow><mo>∼</mo><mn>1</mn><mo>,</mo><mn>000</mn></mrow></math></formula>), fitted to reproduce
+        physico-chemical properties of (bio-)molecules  <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_wang2014building"/>.</p>
+      <p>These PE are usually considered good enough to study non covalent interactions – our focus, even tough they do
+        not cover the modification of chemical bonds. In any case, we take such a function for granted <ref
+          xlink:href="#ABS-RA-2021-note-uid6" location="extern" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest"/>.</p>
+      <p>The PEL codes all <hi rend="bold">structural, thermodynamic</hi>, and <hi rend="bold">kinetic</hi> properties,
+        which can be obtained by averaging properties of conformations over so-called <hi rend="it">thermodynamic
+          ensembles</hi>. The <hi rend="bold">structure</hi> of a macromolecular system requires the characterization of
+        active conformations and important intermediates in functional pathways involving significant basins. In
+        assigning occupation probabilities to these conformations by integrating Boltzmann's distribution, one treats
+          <hi rend="bold">thermodynamics</hi>. Finally, transitions between the states, modeled, say, by a master
+        equation (a continuous-time Markov process), correspond to <hi rend="bold">kinetics</hi>. Classical simulation
+        methods based on molecular dynamics (MD) and Monte Carlo sampling (MC) are developed in the lineage of the
+        seminal work by the 2013 recipients of the Nobel prize in chemistry (Karplus, Levitt, Warshel), which was
+        awarded “<hi rend="it">for the development of multiscale models for complex chemical systems</hi>”. However,
+        except for highly specialized cases where massive calculations have been used <ref location="biblio"
+          xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_shaw2010atomic"/>, neither MD nor MC give access to the aforementioned time
+        scales. In fact, the main limitation of such methods is that they treat structural, thermodynamic and kinetic
+        aspects at once <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_frenkel2002understanding"/>. The absence of specific insights on these three
+        complementary pieces of the puzzle makes it impossible to optimize simulation methods, and results in general in
+        the inability to obtain converged simulations on biologically relevant time-scales.</p>
+      <p>The hardness of structural modeling owes to three intertwined reasons.</p>
+      <p>First, PELs of biomolecules usually exhibit a number of critical points exponential in the dimension  <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_ball1999dynamics"/>; fortunately, they enjoy a multi-scale structure  <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_energy2016carr"/>. Intuitively, the significant local minima/basins are those
+        which are <hi rend="it">deep</hi> or <hi rend="it">isolated/wide</hi>, two notions which are mathematically
+        qualified by the concepts of persistence and prominence. Mathematically, problems are plagued with the curse of
+        dimensionality and measure concentration phenomena. Second, biomolecular processes are inherently multi-scale,
+        with motions spanning <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+          ><mo>∼</mo></math></formula> 15 and <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mo>∼</mo></math></formula> 4 orders of magnitude in time and amplitude respectively <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_adcock2006molecular"/>. Developing methods able to exploit this multi-scale
+        structure has remained elusive. Third, macroscopic properties of biomolecules <hi rend="it">i.e.</hi>
+        observables, are average properties computed over ensembles of conformations, which calls for a multi-scale
+        statistical treatment both of thermodynamics and kinetics.</p>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid7" level="1">
+      <bodyTitle>Validating models.</bodyTitle>
+      <p>A natural and critical question naturally concerns the validation of models proposed in structural
+        bioinformatics. For all three types of questions of interest (structures, thermodynamics, kinetics), there exist
+        experiments to which the models must be confronted – when the experiments can be conducted.</p>
+      <p>For structures, the models proposed can readily be compared against experimental results stemming from X ray
+        crystallography, NMR, or cryo electron microscopy. For thermodynamics, which we illustrate here with binding
+        affinities, predictions can be compared against measurements provided by calorimetry or surface plasmon
+        resonance. Lastly, kinetic predictions can also be assessed by various experiments such as binding affinity
+        measurements (for the prediction of <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><msub><mi>K</mi><mrow><mi>o</mi><mi>n</mi></mrow></msub></math></formula> and <formula type="inline"
+            ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><msub><mi>K</mi><mrow><mi>o</mi><mi>f</mi><mi>f</mi></mrow></msub></math></formula>), or fluorescence
+        based methods (for kinetics of folding).</p>
+    </subsection>
+  </presentation>
+  <fondements id="ABS-RA-2021-cid3">
+    <bodyTitle>Research program</bodyTitle>
+    <p>Our research program ambition to develop a comprehensive set of novel concepts and algorithms to study protein
+      dynamics, based on the modular framework of PEL.</p>
+    <subsection id="ABS-RA-2021-uid8" level="1">
+      <bodyTitle>Modeling the dynamics of proteins</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>Molecular conformations, conformational exploration, energy landscapes,
+        thermodynamics, kinetics.</subsection_keyword_list>
+      <p>As noticed while discussing <hi rend="it">Protein dynamics: core CS - maths challenges</hi>, the integrated
+        nature of simulation methods such as MD or MC is such that these methods do not in general give access to
+        biologically relevant time scales. The framework of energy landscapes <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_wales2003energy"/>, <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_schon2009prediction"/> (Fig. <ref location="intern" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_label_fig-fig"/>) is much more
+        modular, yet, large biomolecular systems remain out of reach.</p>
+      <p>To make a definitive step towards solving the prediction of protein dynamics, we will serialize the discovery
+        and the exploitation of a PEL <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-cazals2015conformational"/>, <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-roth2016hybridizing"/>, <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-energy2016carr"/>. Ideas and
+        concepts from computational geometry/geometric motion planning, machine learning, probabilistic algorithms, and
+        numerical probability will be used to develop two classes of probabilistic algorithms. The first deals with
+        algorithms to discover/sketch PELs <hi rend="it">i.e.</hi> enumerate all significant (persistent or prominent)
+        local minima and their connections across saddles, a difficult task since the number of all local
+        minima/critical points is generally exponential in the dimension. To this end, we will develop a hierarchical
+        data structure coding PELs as well as multi-scale proposals to explore molecular conformations. (Nb: in Monte
+        Carlo methods, a proposal generates a new conformation from an existing one.) The second focuses on methods to
+        exploit/sample PELs <hi rend="it">i.e.</hi> compute so-called densities of states, from which all thermodynamic
+        quantities are given by standard relations  <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_callen1985thermodynamics"/><ref location="biblio"
+          xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_lelievre2010free"/>. This is a hard problem akin to high-dimensional
+        numerical integration. To solve this problem, we will develop a learning based strategy for the Wang-Landau
+        algorithm  <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_landau2014guide"/>–an adaptive Monte Carlo Markov Chain (MCMC) algorithm, as
+        well as a generalization of multi-phase Monte Carlo methods for convex/polytope volume calculations  <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_kannan1997random"/>, <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_cousins2016practical"/>, for
+        non convex strata of PELs.</p>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid9" level="1">
+      <bodyTitle>Algorithmic foundations: geometry, optimization, machine learning</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>Geometry, optimization, machine learning, randomized algorithms,
+        sampling, optimization..</subsection_keyword_list>
+      <p>As discussed in the previous Section, the study of PEL and protein dynamics raises difficult algorithmic /
+        mathematical questions. As an illustration, one may consider our recent work on the comparison of high
+        dimensional distribution <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-cazals-hal-01245408"/>, statistical tests /
+        two-sample tests <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-cazals-hal-02425602"/>, <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-lheritier-hal-01968190"/>,
+        the comparison of clustering <ref location="biblio" xlink:type="simple" xlink:show="replace"
+          xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-cazals-hal-02425599"/>, the complexity study of
+        graph inference problems for low-resolution reconstruction of assemblies <ref location="biblio"
+          xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-cohen-hal-01947563"/>, the analysis of partition (or clustering) stability
+        in large networks, the complexity of the representation of simplicial complexes <ref location="biblio"
+          xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-boissonnat-hal-01259806"/>. Making progress on such questions is
+        fundamental to advance the state-of-the art on protein dynamics.</p>
+      <p>We will continue to work on such questions, motivated by CSB / theoretical biophysics, both in the continuous
+        (geometric) and discrete settings. The developments will be based on a combination of ideas and concepts from
+        computational geometry, machine learning (notably on non linear dimensionality reduction, the reconstruction of
+        cell complexes, and sampling methods), graph algorithms, probabilistic algorithms, optimization, numerical
+        probability, and also biophysics.</p>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid10" level="1">
+      <bodyTitle>Software: the Structural Bioinformatics Library</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>Scientific software, generic programming, molecular
+        modeling..</subsection_keyword_list>
+      <p>While our main ambition is to advance the algorithmic foundations of molecular simulation, a major challenge
+        will be to ensure that the theoretical and algorithmic developments will change the fate of applications, as
+        illustrated by our case studies. To foster such a symbiotic relationship between theory, algorithms and
+        simulation, we will pursue high quality software development and integration within the <hi rend="tt">SBL</hi>,
+        and will also take the appropriate measures for the software to be widely adopted.</p>
+      <subsection id="ABS-RA-2021-uid11" level="2">
+        <bodyTitle>Software in structural bioinformatics.</bodyTitle>
+        <p>Software development for structural bioinformatics is especially challenging, combining advanced geometric,
+          numerical and combinatorial algorithms, with complex biophysical models for PEL and related
+          thermodynamic/kinetic properties. Specific features of the proteins studied must also be accommodated. About
+          50 years after the development of force fields and simulation methods (see the 2013 Nobel prize in chemistry),
+          the software implementing such methods has a profound impact on molecular science at large. One can indeed
+          cite packages such as <hi rend="tt">CHARMM</hi>, <hi rend="tt">AMBER</hi>, <hi rend="tt">gromacs</hi>, <hi
+            rend="tt">gmin</hi>, <hi rend="tt">MODELLER</hi>, <hi rend="tt">Rosetta</hi>, <hi rend="tt">VMD</hi>, <hi
+            rend="tt">PyMol</hi>, .... On the other hand, these packages are goal oriented, each tackling a (small set
+          of) specific goal(s). In fact, no real modular software design and integration has taken place. As a result,
+          despite the high quality software packages available, inter-operability between algorithmic building blocks
+          has remained very limited.</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid12" level="2">
+        <bodyTitle>The <hi rend="tt">SBL</hi>.</bodyTitle>
+        <p>Predicting the dynamics of large molecular systems requires the integration of advanced algorithmic building
+          blocks / complex software components. To achieve a sufficient level of integration, we undertook the
+          development of the Structural Bioinformatics Library (<hi rend="tt">SBL</hi>, <ref
+            xlink:href="http://sbl.inria.fr" location="extern" xlink:type="simple" xlink:show="replace"
+            xlink:actuate="onRequest"/>) <ref location="biblio" xlink:type="simple" xlink:show="replace"
+            xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-cazals-hal-01379635"/>, a generic C++/python
+          cross-platform library providing software to solve complex problems in structural bioinformatics. For
+          end-users, the <hi rend="tt">SBL</hi> provides ready to use, state-of-the-art applications to model
+          macro-molecules and their complexes at various resolutions, and also to store results in perennial and easy to
+          use data formats (<ref xlink:href="https://sbl.inria.fr/applications/" location="extern" xlink:type="simple"
+            xlink:show="replace" xlink:actuate="onRequest"/>). For developers, the <hi rend="tt">SBL</hi> provides a
+          broad C++/python toolbox with modular design (<ref xlink:href="https://sbl.inria.fr/doc/" location="extern"
+            xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>). This hybrid status targeting both
+          end-users and developers stems from an advanced software design involving four software components, namely
+          applications, core algorithms, biophysical models, and modules (<ref
+            xlink:href="https://sbl.inria.fr/doc/modules.html" location="extern" xlink:type="simple"
+            xlink:show="replace" xlink:actuate="onRequest"/>). This modular design makes it possible to optimize
+          robustness and the performance of individual components, which can then be assembled within a goal oriented
+          application.</p>
+      </subsection>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid13" level="1">
+      <bodyTitle>Applications: modeling interfaces, contacts, and interactions</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>Protein interactions, protein complexes,
+        structure/thermodynamics/kinetics prediction.</subsection_keyword_list>
+      <p>Our methods will be validated on various systems for which flexibility operates at various scales. Example such
+        systems are antibody-antigen complexes, (viral) polymerases, (membrane) transporters.</p>
+      <p>Even very complex biomolecular systems are deterministic in prescribed conditions (temperature, pH, etc),
+        demonstrating that despite their high dimensionality, all <hi rend="it">d.o.f.</hi> are not at play at the same
+        time. This insight suggests three classes of systems of particular interest. The first class consists of systems
+        defined from (essentially) rigid blocks whose relative positions change thanks to conformational changes of
+        linkers; a Newton cradle provides an interesting way to envision such as system. We have recently worked on one
+        such system, a membrane proteins involve in antibiotic resistance (<hi rend="tt">AcrB</hi>, see <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-simsir-hal-03006981"/>. The second class consists of cases where relative
+        positions of subdomains do not significantly change, yet, their intrinsic dynamics are significantly altered. A
+        classical illustration is provided by antibodies, whose binding affinity owes to dynamics localized in six
+        specific loops <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_m-marillet-hal-01159641"/>, <ref location="biblio" xlink:type="simple"
+          xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_m-marillet-hal-01675467"/>.
+        The third class, consisting of composite cases, will greatly benefit from insights on the first two classes. As
+        an example, we may consider the spikes of the SARS-CoV-2 virus, whose function (performing infection) involves
+        both large amplitude conformational changes and subtle dynamics of the so-called receptor binding domain. We
+        have started to investigate this system, in collaboration with B. Delmas (<hi rend="tt">INRAe</hi>) <ref
+          location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+          xlink:href="#ABS-RA-2021_bibitem_bereux-hal-03387889"/>.</p>
+      <p>In ABS, we will investigate systems in these three tiers, in collaboration with expert collaborators, to
+        hopefully open new perspectives in biology and medicine. Along the way, we will also collaborate on selected
+        questions at the interface between CSB and systems biology, as it is now clear that the structural level and the
+        systems level (pathways of interacting molecules) can benefit from one another.</p>
+    </subsection>
+  </fondements>
+  <domaine id="ABS-RA-2021-cid4">
+    <bodyTitle>Application domains</bodyTitle>
+    <p>The main application domain is Computational Structural Biology, as underlined in the <hi rend="it">Research
+        Program</hi>.</p>
+  </domaine>
+  <highlights id="ABS-RA-2021-cid5">
+    <bodyTitle>Highlights of the year</bodyTitle>
+    <p>In October 2021, Edoardo Sarti has joined ABS as <hi rend="it">Chargé de Recherche de Classe Normale</hi>. His
+      expertise comprises a diverse set of interests spanning from algorithmic questions about geometrical, functional
+      and evolutionary aspects of biomolecules (latest study: <ref location="biblio" xlink:type="simple"
+        xlink:show="replace" xlink:actuate="onRequest" xlink:href="#ABS-RA-2021_bibitem_lemoigne-hal-03521911"/>), to
+      the collection and analysis of large collections of molecular structural data. From the very start, E. Sarti has
+      started taking part in several research and technical projects of ABS.</p>
+  </highlights>
+  <logiciels id="ABS-RA-2021-cid6">
+    <bodyTitle>New software and platforms</bodyTitle>
+    <p>See report on the Structural Bioinformatics Library.</p>
+    <subsection id="ABS-RA-2021-uid14" level="1">
+      <bodyTitle>New software</bodyTitle>
+      <subsection id="ABS-RA-2021-uid15" level="2">
+        <bodyTitle>SBL</bodyTitle>
+        <descriptionlist>
+          <label>Name:</label>
+          <label>Keywords:</label>
+          <label>Functional Description:</label>
+          <label>Release Contributions:</label>
+          <label>URL:</label>
+          <label>Publication:</label>
+          <label>Contact:</label>
+        </descriptionlist>
+      </subsection>
+    </subsection>
+  </logiciels>
+  <resultats id="ABS-RA-2021-cid7">
+    <bodyTitle>New results</bodyTitle>
+    <subsection id="ABS-RA-2021-uid23" level="1">
+      <bodyTitle>Modeling interfaces, contacts, and interactions</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>docking, scoring, interfaces, protein complexes, Voronoi diagrams,
+        arrangements of balls.</subsection_keyword_list>
+      <subsection id="ABS-RA-2021-uid24" level="2">
+        <bodyTitle>Boosting the analysis of protein interfaces with Multiple Interface String Alignments: illustration
+          on the spikes of coronaviruses</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with S. Bereux and B. Delmas (INRAe, Jouy-en-Josas). </moreinfo>
+
+        <p>In this work <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_bereux-hal-03387889"/>, we introduce <hi rend="it">Multiple Interface
+            String Alignment</hi> (MISA), a visualization tool to display coherently various sequence and structure
+          based statistics at protein-protein interfaces (SSE elements, buried surface area, <formula type="inline"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mrow><mi>Δ</mi><mi>A</mi><mi>S</mi><mi>A</mi></mrow></math></formula>, B factor values, etc). The
+          amino-acids supporting these annotations are obtained from Voronoi interface models. The benefit of MISA is to
+          collate annotated sequences of (homologous) chains found in different biological contexts i.e. bound with
+          different partners or unbound. The aggregated views MISA/SSE, MISA/BSA, MISA/<formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mrow><mi>Δ</mi><mi>A</mi><mi>S</mi><mi>A</mi></mrow></math></formula> etc make it trivial to identify
+          commonalities and differences between chains, to infer key interface residues, and to understand where
+          conformational changes occur upon binding. As such, they should prove of key relevance for knowledge based
+          annotations of protein databases such as the Protein Data Bank.</p>
+        <p>Illustrations are provided on the receptor binding domain (RBD) of coronaviruses, in complex with their
+          cognate partner or (neutralizing) antibodies. MISA computed with a minimal number of structures complement and
+          enrich findings previously reported.</p>
+        <p>The corresponding package is available from the Structural Bioinformatics Library (<ref
+            xlink:href="http://sbl.inria.fr" location="extern" xlink:type="simple" xlink:show="replace"
+            xlink:actuate="onRequest"/></p>
+        <p noindent="true">and <ref
+            xlink:href="https://sbl.inria.fr/doc/Multiple_interface_string_alignment-user-manual.html" location="extern"
+            xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>).</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid25" level="2">
+        <bodyTitle>SARS-CoV-2 Through the Lens of Computational Biology: How bioinformatics is playing a key role in the
+          study of the virus and its origins</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with Samuel Alizon (MIVEGEC - Maladies infectieuses et vecteurs : écologie,
+          génétique, évolution et contrôle), Stéphane Guindon (MAB - Méthodes et Algorithmes pour la Bioinformatique,
+          LIRMM - Laboratoire d'Informatique de Robotique et de Microélectronique de Montpellier), Claire Lemaitre
+          (GenScale - Scalable, Optimized and Parallel Algorithms for Genomics, Inria Rennes – Bretagne Atlantique),
+          Tristan Mary-Huard (INRAE - Institut National de Recherche pour l’Agriculture, l’Alimentation et
+          l’Environnement), Anna Niarakis (Lifeware - Computational systems biology and optimization, Inria Saclay - Ile
+          de France; GenHotel - Laboratoire de recherche européen pour la polyarthrite rhumatoïde), Mikaël Salson
+          (CRIStAL - Centre de Recherche en Informatique, Signal et Automatique de Lille - UMR 9189), Celine Scornavacca
+          (UMR ISEM - Institut des Sciences de l'Evolution de Montpellier), Hélène Touzet (CRIStAL - Centre de Recherche
+          en Informatique, Signal et Automatique de Lille - UMR 9189). </moreinfo>
+
+        <p>On December 2019, the Chinese Center for Disease Control reported several cases of severe pneumonia that
+          resists usual treatments in the city of Wuhan. This was the beginning of the COVID-19 pandemic which caused
+          more than 80 millions infection cases and 1.7 millions deaths during the year 2020 alone1 . This major
+          outbreak has given rise to global public health responses as well as an international research effort of
+          unprecedented scope and speed. This scientific mobilization has led to remarkable results, which have enabled
+          a great deal of knowledge to be accumulated in just a few months on this novel pathogen: identification of the
+          virus, of its main proteins, analysis of its origin and its functionning. This basic biological knowledge is
+          mandatory to medical advances: design tests, find a vaccine or a cure.</p>
+        <p>In this document <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_alizon-hal-03170023"/>, one year after the beginning of the worldwide
+          spread of the disease, we wish to shed particular light on the contribution of bioinformatics in all this
+          work. Bioinformatics is a discipline at crossroads of computer sciences, mathematics and biology that has
+          taken on an inestimable importance in modern biology and medicine. It provides computational models,
+          algorithms and software to the scientific community, that are both operational and effective. The discovery
+          and study of the SARS-Cov-2 coronavirus is an emblematic example. The utilization of bioinformatics methods
+          has been at the heart of essential milestones : from the sequencing of the virus genome and its annotation to
+          the history of its origin, the modelisation of interacting biological entities both at the molecular scale and
+          at the network scale, and the study of the host genetic susceptibility. All these studies, as a whole, have
+          made it possible to elucidate the nature and the functionning of the novel pathogen and have greatly
+          contributed to the fight against COVID-19.</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid26" level="2">
+        <bodyTitle>Gene prioritization based on random walks with restarts and absorbing states, to define gene sets
+          regulating drug pharmacodynamics from single-cell analyses</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+          <person>
+            <firstname>D.</firstname>
+            <lastname>Mazauric</lastname>
+          </person>
+          <person>
+            <firstname>A.</firstname>
+            <lastname>Sales de Queiroz</lastname>
+          </person>
+          <person>
+            <firstname>G.</firstname>
+            <lastname>Sales Santa Cruz</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with Alain Jean-Marie (Inria Neo) and Jérémie Roux (Inserm and CNRS and UCA). </moreinfo>
+
+        <p>Prioritizing genes for their role in drug sensitivity, is an important step in understanding drugs mechanisms
+          of action and discovering new molecular targets for co-treatment. In this work <ref location="biblio"
+            xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_salesdequeiroz-hal-03438430"/>, we formalize this problem by considering
+          two sets of genes <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>X</mi></math></formula> and <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><mi>P</mi></math></formula> respectively composing the predictive gene signature of sensitivity to a
+          drug and the genes involved in its mechanism of action, as well as a protein interaction network (PPIN)
+          containing the products of <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mi>X</mi></math></formula> and <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><mi>P</mi></math></formula> as nodes. We introduce <hi rend="tt">Genetrank</hi>, a method to prioritize
+          the genes in <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>X</mi></math></formula> for their likelihood to regulate the genes in <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math></formula>.</p>
+        <p><hi rend="tt">Genetrank</hi> uses asymmetric random walks with restarts, absorbing states, and a suitable
+          renormalization scheme. Using novel so-called saturation indices, we show that the conjunction of absorbing
+          states and renormalization yields an exploration of the PPIN which is much more progressive than that afforded
+          by random walks with restarts only. Using MINT as underlying network, we apply <hi rend="tt">Genetrank</hi> to
+          a predictive gene signature of cancer cells sensitivity to tumor-necrosis-factor-related apoptosis-inducing
+          ligand (TRAIL), performed in single-cells. Our ranking provides biological insights on drug sensitivity and a
+          gene set considerably enriched in genes regulating TRAIL pharmacodynamics when compared to the most
+          significant differentially expressed genes obtained from a statistical analysis framework alone. We also
+          introduce <hi rend="it">gene expression radars</hi>, a visualization tool to assess all pairwise interactions
+          at a glance.</p>
+        <p><hi rend="tt">Genetrank</hi> is made available in the Structural Bioinformatics Library (<ref
+            xlink:href="https://sbl.inria.fr/doc/Genetrank-user-manual.html" location="extern" xlink:type="simple"
+            xlink:show="replace" xlink:actuate="onRequest"/>). It should prove useful for mining gene sets in
+          conjunction with a signaling pathway, whenever other approaches yield relatively large sets of genes.</p>
+      </subsection>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid27" level="1">
+      <bodyTitle>Modeling the dynamics of proteins</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>protein, flexibility, collective coordinate, conformational sampling
+        dimensionality reduction.</subsection_keyword_list>
+      <subsection id="ABS-RA-2021-uid28" level="2">
+        <bodyTitle>Tripeptide loop closure: a detailed study of reconstructions based on Ramachandran
+          distributions</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+          <person>
+            <firstname>T.</firstname>
+            <lastname>O'Donnell</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with C. Robert (IBPC / CNRS, Paris, France). </moreinfo>
+
+        <p>Tripeptide loop closure (TLC) is a standard procedure to reconstruct protein backbone conformations, by
+          solving a polynomial system in a single variable yielding up to 16 real solutions.</p>
+        <p>In this work <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_odonnell-hal-03232851"/>, we first show that multiprecision is required in
+          a TLC solver to guarantee the existence and the accuracy of solutions. We then compare solutions yielded by
+          the TLC solver against tripeptides from the Protein Data Bank. We show that these solutions are geometrically
+          diverse (up to <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mn>3</mn><mi>Å</mi></mrow></math></formula> RMSD with respect to the data), and sound in terms
+          of potential energy. Finally, we compare Ramachandran distributions of data and reconstructions for the three
+          amino acids. The distribution of reconstructions in the second angular space <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><mrow><mo>(</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo>,</mo><msub><mi>ψ</mi><mn>2</mn></msub><mo>)</mo></mrow></math></formula>
+          stands out, with a rather uniform distribution leaving a central void.</p>
+        <p>We anticipate that these insights, coupled to our robust implementation in the Structural Bioinformatics
+          Library (<ref xlink:href="https://sbl.inria.fr/doc/Tripeptide_loop_closure-user-manual.html" location="extern"
+            xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>), will help understanding the
+          properties of TLC reconstructions, with potential applications to the generation of conformations of flexible
+          loops in particular.</p>
+      </subsection>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid29" level="1">
+      <bodyTitle>Algorithmic foundations</bodyTitle>
+      <subsection_keyword_list><b>Keywords: </b>Computational geometry, computational topology, optimization, data
+        analysis.</subsection_keyword_list>
+      <subsection id="ABS-RA-2021-uid30" level="2">
+        <bodyTitle>Frechet mean and p-mean on the unit circle: characterization, decidability, and algorithm</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+          <person>
+            <firstname>T.</firstname>
+            <lastname>O'Donnell</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with B. Delmas (INRAe, Jouy-en-Josas). </moreinfo>
+
+        <p>The center of mass of a point set lying on a manifold generalizes the celebrated Euclidean centroid, and is
+          ubiquitous in statistical analysis in non Euclidean spaces.</p>
+        <p>In this work <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_cazals-hal-03183028"/>, we give a complete characterization of the weighted
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></formula>-mean of
+          a finite set of angular values on <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><msup><mi>S</mi><mn>1</mn></msup></math></formula>, based on a decomposition of <formula
+            type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><msup><mi>S</mi><mn>1</mn></msup></math></formula> such that the functional of interest has at most one
+          local minimum per cell. This characterization is used to show that the problem is decidable for rational
+          angular values –a consequence of Lindemann's theorem on the transcendence of <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi></math></formula>, and to develop an effective
+          algorithm parameterized by exact predicates. A robust implementation of this algorithm based on
+          multi-precision interval arithmetic is also presented, and is shown to be effective for large values of
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></formula> and
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></formula>. We use
+          it as building block to implement the k-means and k-means++ clustering algorithms on the flat torus, with
+          applications to clustering protein molecular conformations. These algorithms are available in the Structural
+          Bioinformatics Library (<ref xlink:href="http://sbl.inria.fr" location="extern" xlink:type="simple"
+            xlink:show="replace" xlink:actuate="onRequest"/>).</p>
+        <p>Our derivations are of interest in two respects. First, efficient <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></formula>-mean calculations are relevant to
+          develop principal components analysis on the flat torus encoding angular spaces–a particularly important case
+          to describe molecular conformations. Second, our two-stage strategy stresses the interest of combinatorial
+          methods for p-means, also emphasizing the role of numerical issues.</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid31" level="2">
+        <bodyTitle>Improved polytope volume calculations based on Hamiltonian Monte Carlo with boundary reflections and
+          sweet arithmetics</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+          <person>
+            <firstname>A.</firstname>
+            <lastname>Chevallier</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with S. Pion IMS (Univ. Bordeaux / Bordeaux INP / CNRS UMR 5218). </moreinfo>
+
+        <p>Computing the volume of a high dimensional polytope is a fundamental problem in geometry, also connected to
+          the calculation of densities of states in statistical physics, and a central building block of such algorithms
+          is the method used to sample a target probability distribution.</p>
+        <p>This paper <ref location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_chevallier-hal-03048725"/> studies Hamiltonian Monte Carlo (HMC) with
+          reflections on the boundary of a domain, providing an enhanced alternative to Hit-and-run (HAR) to sample a
+          target distribution restricted to the polytope. We make three contributions. First, we provide a convergence
+          bound, paving the way to more precise mixing time analysis. Second, we present a robust implementation based
+          on multi-precision arithmetic, a mandatory ingredient to guarantee exact predicates and robust constructions.
+          We however allow controlled failures to happen, introducing the <hi rend="it">Sweeten Exact Geometric
+            Computing</hi> (SEGC) paradigm. Third, we use our HMC random walk to perform H-polytope volume calculations,
+          using it as an alternative to HAR within the volume algorithm by Cousins and Vempala. The systematic tests
+          conducted up to dimension <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>n</mi><mo>=</mo><mn>100</mn></mrow></math></formula> on the cube, the isotropic and the
+          standard simplex show that HMC significantly outperforms HAR both in terms of accuracy and running time.
+          Additional tests show that calculations may be handled up to dimension <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>=</mo><mn>500</mn></mrow></math></formula>.
+          These tests also establish that multiprecision is mandatory to avoid exits from the polytope.</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid32" level="2">
+        <bodyTitle>Overlaying a hypergraph with a graph with bounded maximum degree, with application for low-resoluton
+          reconstructions of molecular assemblies</bodyTitle>
+        <participants>
+          <person>
+            <firstname>D.</firstname>
+            <lastname>Mazauric</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with F. Havet, T. V. H. Nguyen laboratoire I3S (CNRS, Université Côte d'Azur). </moreinfo>
+
+        <p>We analyze a generalization of the minimum connectivity inference problem (MCI) that models the computation
+          of low-resolution structures of macro-molecular assemblies, based on data obtained by native mass
+          spectrometry. The generalization studied in this work, allows us to consider more refined constraints for the
+          characterization of low resolution models of large assemblies, such as degree constraints (e.g. a protein has
+          a limited number of other proteins in contact).</p>
+        <p>More precisely, let <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>G</mi></math></formula> and <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><mi>H</mi></math></formula> be respectively a graph and a hypergraph defined on a same set of vertices,
+          and let <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula> be
+          a graph. We say that <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>G</mi></math></formula><hi rend="it"><formula type="inline"><math
+                xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula>-overlays</hi> a hyperedge
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math></formula> of
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math></formula> if the
+          subgraph of <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>G</mi></math></formula> induced by <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math></formula> contains <formula type="inline"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula> as a spanning subgraph, and
+          that <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>G</mi></math></formula><hi
+            rend="it"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mi>F</mi></math></formula>-overlays</hi><formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math></formula> if it <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula>-overlays every hyperedge of
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math></formula>. For a
+          fixed graph <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mi>F</mi></math></formula> and a fixed integer <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></formula>, the problem <hi rend="sc"><formula
+              type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><mrow><mo>(</mo><mi>Δ</mi><mo>≤</mo><mi>k</mi><mo>)</mo></mrow></math></formula>-<formula
+              type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula>-Overlay</hi>
+          consists in deciding whether there exists a graph with maximum degree at most <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></formula> that <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula>-overlays a given hypergraph
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math></formula>. In <ref
+            location="biblio" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"
+            xlink:href="#ABS-RA-2021_bibitem_havet-hal-03368214"/>, we prove that for any graph <formula type="inline"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula> which is neither complete
+          nor anticomplete, there exists an integer <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mrow><mi>n</mi><mi>p</mi><mo>(</mo><mi>F</mi><mo>)</mo></mrow></math></formula> such that <hi rend="sc"
+              ><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><mrow><mo>(</mo><mi>Δ</mi><mo>≤</mo><mi>k</mi><mo>)</mo></mrow></math></formula>-<formula
+              type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math></formula>-Overlay</hi> is
+            <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mrow><mi>N</mi><mi>P</mi></mrow></math></formula>-complete for all <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>k</mi><mo>≥</mo><mi>n</mi><mi>p</mi><mo>(</mo><mi>F</mi><mo>)</mo></mrow></math></formula>.</p>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid33" level="2">
+        <bodyTitle>Conflict coloring problems: complexity and application to high resolution biological assembly
+          modeling</bodyTitle>
+        <participants>
+          <person>
+            <firstname>F.</firstname>
+            <lastname>Cazals</lastname>
+          </person>
+          <person>
+            <firstname>D.</firstname>
+            <lastname>Mazauric</lastname>
+          </person>
+        </participants>
+
+        <moreinfo>In collaboration with F. Havet, T. V. H. Nguyen laboratoire I3S (CNRS, Université Côte d'Azur). </moreinfo>
+
+        <p>Given a graph <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>G</mi><mo>=</mo><mo>(</mo><mi>V</mi><mo>,</mo><mi>E</mi><mo>)</mo></mrow></math></formula>,
+          a color set <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>C</mi><mo>(</mo><mi>v</mi><mo>)</mo></mrow></math></formula> for each vertex <formula
+            type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>v</mi><mo>.</mo><mo>∈</mo><mi>V</mi></mrow></math></formula>, a bipartite graph between
+          color sets <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>C</mi><mo>(</mo><mi>u</mi><mo>)</mo></mrow></math></formula> and <formula type="inline"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+              ><mrow><mi>C</mi><mo>(</mo><mi>v</mi><mo>)</mo></mrow></math></formula> for every edge <formula
+            type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>u</mi><mi>v</mi><mo>∈</mo><mi>E</mi></mrow></math></formula>, <hi rend="sc">Conflict
+            Coloring</hi> consists in deciding whether exists a conflict coloring, that is a coloring in which <formula
+            type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                  ><mrow><mi>c</mi><mo>(</mo><mi>u</mi><mo>)</mo><mi>c</mi><mo>(</mo><mi>v</mi><mo>)</mo></mrow></math></formula>
+          is not an edge of the bipartite graph. <hi rend="sc">Conflict Coloring</hi> is motivated by computational
+          structural biology problems, high resolution determination of molecular assemblies. The graph represents the
+          subunits and the interaction between them, the colors are the given conformations, and the edges of the
+          bipartite graphs are the incompatible conformations of two subunits.</p>
+        <p>In this work, we first establish the complexity dichotomies (polynomial vs <formula type="inline"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>N</mi><mi>P</mi></mrow></math></formula>-complete)
+          for <hi rend="sc">Conflict Coloring</hi> and its variants. We provide some experiments in which we build
+          instances of <hi rend="sc">Conflict Coloring</hi> associated to <hi rend="it">Voronoi diagram</hi> in the
+          plane, and we then analyse the existences of a solution related to parameters used in our experimental
+          setup.</p>
+      </subsection>
+    </subsection>
+  </resultats>
+  <partenariat id="ABS-RA-2021-cid8">
+    <bodyTitle>Partnerships and cooperations</bodyTitle>
+    <participants>
+      <person>
+        <firstname>F.</firstname>
+        <lastname>Cazals</lastname>
+      </person>
+      <person>
+        <firstname>D.</firstname>
+        <lastname>Mazauric</lastname>
+      </person>
+    </participants>
+
+    <subsection id="ABS-RA-2021-uid34" level="1">
+      <bodyTitle>International research visitors</bodyTitle>
+      <subsection id="ABS-RA-2021-uid35" level="2">
+        <bodyTitle>Visits of international scientists</bodyTitle>
+        <subsection id="ABS-RA-2021-uid36" level="3">
+          <bodyTitle>Inria International Chair</bodyTitle>
+          <simplelist>
+            <li>David Wales, Cambridge University, is endowed chair within 3IA Côte d'Azur / ABS.</li>
+          </simplelist>
+        </subsection>
+      </subsection>
+    </subsection>
+  </partenariat>
+  <diffusion id="ABS-RA-2021-cid9">
+    <bodyTitle>Dissemination</bodyTitle>
+    <subsection id="ABS-RA-2021-uid38" level="1">
+      <bodyTitle>Promoting scientific activities</bodyTitle>
+      <subsection id="ABS-RA-2021-uid39" level="2">
+        <bodyTitle>Scientific events: organisation</bodyTitle>
+        <p noindent="true"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mo>•</mo></math></formula> Frédéric Cazals was involved in the organization of:</p>
+        <simplelist>
+          <li>Symposium <hi rend="it">Multidisciplinary approaches in cancer research</hi>, Organized at Inria Sophia
+            Antipolis Méditerranée. Web: <ref xlink:href="https://project.inria.fr/ucancer2020/" location="extern"
+              xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+          <li>Winter School <hi rend="it">Machine Learning Methods to Analyze and Predict Protein Structure, Dynamics
+              and Function</hi>, CIRM, Luminy, November 7-12, 2021. Web: <ref
+              xlink:href="https://algosb2021.sciencesconf.org/" location="extern" xlink:type="simple"
+              xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+          <li>
+            <hi rend="it">Critical evaluation of methods for scoring interfaces of protein complexes</hi>, Online Elixir
+            3D-Bioinfo meeting, organized by Emmanuel Levy (Elixir IL), Frederic Cazals (Elixir FR), Shoshana Wodak
+            (Elixir BE).</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid43" level="2">
+        <bodyTitle>Scientific events: selection</bodyTitle>
+        <subsection id="ABS-RA-2021-uid44" level="3">
+          <bodyTitle>Member of the conference program committees</bodyTitle>
+          <p noindent="true">Frédéric Cazals participated to the following program committees:</p>
+          <simplelist>
+            <li>Symposium on Solid and Physical Modeling</li>
+            <li>Intelligent Systems for Molecular Biology (ISMB) / European Conference on Computational Biology
+              (ECCB)</li>
+          </simplelist>
+        </subsection>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid47" level="2">
+        <bodyTitle>Invited talks</bodyTitle>
+        <p noindent="true"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mo>•</mo></math></formula> Frédéric Cazals gave the following invited talks:</p>
+        <simplelist>
+          <li>
+            <hi rend="it">Mining protein flexibility: a new class of move sets</hi>; GDR BIM/GT MASIM, November 2021;
+            UCA, 5th Academy 4 Research Webinar - Mental Retardation and Protein Dynamics, October 2021.</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid49" level="2">
+        <bodyTitle>Leadership within the scientific community</bodyTitle>
+        <p noindent="true"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mo>•</mo></math></formula> Frédéric Cazals</p>
+        <simplelist>
+          <li>2010-...: Member of the steering committee of the GDR Bioinformatique Moléculaire, for the Structure and
+            macro-molecular interactions theme.</li>
+          <li>2017-...: Co-chair, with Yann Ponty, of the working group / groupe de travail (GT MASIM - Méthodes
+            Algorithmiques pour les Structures et Interactions Macromoléculaires), within the GDR de BIoinfor- matique
+            Moléculaire (GDR BIM, <ref xlink:href="https://www.gdr-bim.cnrs.fr/" location="extern" xlink:type="simple"
+              xlink:show="replace" xlink:actuate="onRequest"/>).</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid52" level="2">
+        <bodyTitle>Research administration</bodyTitle>
+        <p noindent="true"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mo>•</mo></math></formula> Frédéric Cazals</p>
+        <simplelist>
+          <li>2018-...: Member of the bureau du comité des équipes projets.</li>
+          <li>2020-...: Member of the bureau of the EUR Life, Université Côte d’Azur.</li>
+        </simplelist>
+        <p noindent="true"><formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+            ><mo>•</mo></math></formula> Dorian Mazauric</p>
+        <simplelist>
+          <li>2019-...: Member of the comité Plateformes.</li>
+        </simplelist>
+      </subsection>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid56" level="1">
+      <bodyTitle>Teaching - Supervision - Juries</bodyTitle>
+      <subsection id="ABS-RA-2021-uid57" level="2">
+        <bodyTitle>Teaching</bodyTitle>
+        <simplelist>
+          <li>2014–...: Master Data Sciences Program (M2), Department of Applied Mathematics, Ecole Centrale-Supélec;
+              <hi rend="it">Foundations of Geometric Methods in Data Analysis</hi>; F. Cazals and M. Carrière, Inria
+            Sophia / (ABS, DataShape). Web: <ref
+              xlink:href="http://www-sop.inria.fr/abs/teaching/centrale-FGMDA/centrale-FGMDA--cazals-carriere.html"
+              location="extern" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+          <li>2021–...: Master Data Sciences &amp; Artificial Intelligence (M1), Université Côte d’Azur; <hi rend="it"
+              >Introduction to machine learning</hi> (course practicals); E. Sarti.</li>
+          <li>2021–...: Master Data Sciences &amp; Artificial Intelligence (M2), Université Côte d’Azur; <hi rend="it"
+              >Geometric and topological methods in machine learning</hi>; F. Cazals, J-D. Boissonnat and M. Carrière,
+            Inria Sophia / (ABS, DataShape, DataShape); Web: <ref
+              xlink:href="https://univ-cotedazur.fr/formation/offre-de-formation/msc-in-data-sciences" location="extern"
+              xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+          <li>2021–...: Master Cancérologie et Recherche Translationnelle (M2), Université Côte d’Azur; <hi rend="it"
+              >Binding affinity maturation and protein interaction network analysis: two examples of bioinformatics
+              applications in medicine</hi>; F. Cazals.</li>
+          <li>2020–...: Master Sciences du Vivant (M2), parcours Biologie, Informatique, Mathématiques, Université Côte
+            d’Azur; <hi rend="it">Introduction to statistical physics of biomolecules</hi>; F. Cazals.</li>
+          <li>2018–...: Master : Algorithmique et Complexité, 23h30 TD, niveau M1, Polytech Nice Sophia, Université Côte
+            d'Azur, filière Sciences Informatiques, France; Dorian Mazauric.</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid64" level="2">
+        <bodyTitle>Supervision</bodyTitle>
+        <p>PhD thesis:</p>
+        <simplelist>
+          <li>
+            <hi rend="bold">PhD in progress, 3rd year:</hi> Timothée O'Donnel, <hi rend="it">Modeling the influenza
+              polymerase</hi>. Université Côte d'Azur. Thesis co-supervised by Frédéric Cazals and Bernard Delmas, INRA
+            Jouy-en-Josas.</li>
+          <li>
+            <hi rend="bold">Defended PhD:</hi> Thi Viet Ha Nguyen, <hi rend="it">Graph Algorithms techniques for (low
+              and high) resolution models of large protein assemblies</hi>. Université Côte d'Azur. Thesis co-supervised
+            by Frédéric Havet, Laboratoire I3S (CNRS, Université Côte d'Azur).</li>
+        </simplelist>
+        <p>Interns:</p>
+        <simplelist>
+          <li>Aarushi Gupta, intern from IIT Delhi, summer 2021. <hi rend="it">Modeling protein backbone flexibility
+              using solutions of the tripeptide loop closure.</hi>
+          </li>
+          <li>Louis Goldenberg, intern from Ecole Polytechnique, summer 2021. <hi rend="it">Parametric models for
+              compact clusters.</hi>
+          </li>
+          <li>Sebastián Gallardo Diaz, Universidad Técnica Federico Santa Marı́a, Valparaı́so, Chile. Advisors: Pierre
+            Kornprobst (Inria project-team Biovision), Dorian Mazauric. <hi rend="it">Algorithms for a new packing
+              problem : Towards Reading Accessible Newspapers</hi>.</li>
+          <li>Vivian Losciale, Université Côte d'Azur. Advisors: Jérémy Camponovo, Frédéric Havet, Buntheng Ly, Dorian
+            Mazauric, Maxime Sermesant.<hi rend="it">Jeux-vidéos de médiation : Intelligence artificielle pour
+              l’imagerie médicale</hi>.</li>
+          <li>Quentin Larose, Université Côte d'Azur. Advisors: Agnès Bessière, Carole Clastres, Jérémy Camponovo, Luc
+            Hogie, Dorian Mazauric, Eric Pascual, Sandrine Selosse, Brigitte Trousse. <hi rend="it">Portail des
+              ressources Terra Numerica</hi>.</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid72" level="2">
+        <bodyTitle>Juries</bodyTitle>
+        <p noindent="true">Frédéric Cazals participated to the following committees:</p>
+        <simplelist>
+          <li>Luke Dicks, Cambridge University, April 2021. Rapporteur for the PhD thesis <hi rend="it">K-means
+              landscapes: exploring clustering solution spaces using energy landscape theory</hi>. Advisor: David
+            Wales.</li>
+          <li>Manon Ruffini, Univ. of Toulouse, March 2021. Rapporteur on the PhD thesis <hi rend="it">Models and
+              Algorithms for Computational Protein Design</hi>. Advisor: Thomas Schiex.</li>
+          <li>Dorian Mazauric, Habilitation thesis, Université Côte d'Azur, November 2021. Committee member (president)
+            for the habilitation <hi rend="it">Algorithmique des graphes pour les réseaux et la biologie structurale
+              computationnelle</hi>.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric participated to the following committees:</p>
+        <simplelist>
+          <li>Thi Viet Ha Nguyen, Université Côte d'Azur, December 2021. Committee member for the PhD thesis <hi
+              rend="it">Graph Algorithms techniques for (low and high) resolution models of large protein
+              assemblies</hi>. Advisors: Frédéric Havet, Dorian Mazauric.</li>
+        </simplelist>
+      </subsection>
+    </subsection>
+    <subsection id="ABS-RA-2021-uid77" level="1">
+      <bodyTitle>Popularization</bodyTitle>
+      <subsection id="ABS-RA-2021-uid78" level="2">
+        <bodyTitle>Internal or external Inria responsibilities</bodyTitle>
+        <p noindent="true">Dorian Mazauric:</p>
+        <simplelist>
+          <li>2019–...: Head of Commission <ref xlink:href="https://project.inria.fr/mastic/" location="extern"
+              xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/> (Médiation et Animation des
+            MAthématiques, des Sciences et Techniques Informatiques et des Communications), Inria Sophia Antipolis -
+            Méditerranée.</li>
+          <li>2019–...: Coordinator of <ref xlink:href="https://terra-numerica.org" location="extern"
+              xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>, an ambitious scientific
+            popularisation project. Its main goal is to create a "Dedicated Digital space" in the south of France, (in
+            the spirit of the "Cité des Sciences" or "Palais de la découverte" in Paris). To do so, Terra Numerica is
+            developing and structuring popularisation activities, supports which are spread in different antennas
+            throughout the territory (e.g. Espace Terra Numerica - Valbonne Sophia Antipolis, MIA, in schools,
+            exhibition extensions...). This large-scale project involves (brings together) all the actors of research,
+            education, industry, associations and collectivities... It is actually composed of more than one hundred
+            people.</li>
+          <li>2018–...: Member of the Conseil d'Administration de l'association les Petits Débrouillards.</li>
+          <li>2017–...: Member of projet de médiation Galéjade : Graphes et ALgorithmes : Ensemble de Jeux À Destination
+            des Ecoliers... (mais pas que).</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid83" level="2">
+        <bodyTitle>Articles and contents</bodyTitle>
+        <p noindent="true">Frédéric Cazals:</p>
+        <simplelist>
+          <li>Podcast <hi rend="it">Investiga’Sciences </hi><hi rend="tt">Vive la protéine</hi>: interview-discussion of
+            Thomas Schiex and myself by Valérie Ravinet, October 2021. <ref
+              xlink:href="https://podcast.ausha.co/investiga-sciences/investiga-sciences-9-vive-la-proteine"
+              location="extern" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric:</p>
+        <simplelist>
+          <li>Participation to the development of <ref xlink:href="https://terra-numerica.org/ressources/"
+              location="extern" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+          <li>Participation to the development of popularization videos games <ref
+              xlink:href="https://terra-numerica.org/ateliers-et-jeux-en-ligne/" location="extern" xlink:type="simple"
+              xlink:show="replace" xlink:actuate="onRequest"/>.</li>
+        </simplelist>
+      </subsection>
+      <subsection id="ABS-RA-2021-uid87" level="2">
+        <bodyTitle>Interventions</bodyTitle>
+        <p noindent="true">Dorian Mazauric - Fête de la Science 2021:</p>
+        <simplelist>
+          <li>Village des Sciences de Villeneuve-Loubet Avec Pobot. Samedi 02 octobre 2021 et dimanche 03 octobre 2021.
+            With Thomas Dissaux, Adrien Gausseran, Nicolas Nisse, Eric Pascual, Lucas Picassari-Arrieta, Brigitte
+            Trousse.</li>
+          <li>Village des sciences de la vallée de la Vésubie avec Les Apprentis Pas Sages Samedi 02 octobre 2021. <hi
+              rend="it">Puzzle du nid d’abeilles – Graphes et algorithmes grandeur nature</hi>. With Samantha
+            Lanney-Ricci, Magali Martin-Mazauric.</li>
+          <li>Interventions au Campus International de Valbonne Lundi 04 octobre 2021. <hi rend="it">La magie du binaire
+              – Pas besoin de réfléchir, les ordinateurs calculent tellement vite ? Problèmes actuels en
+              algorithmique</hi>. With Estelle Zavoli.</li>
+          <li>Atelier scientifique à l’Espace d’Art Concret (EAC), Mouans-Sartoux Organisé par l’EAC (Amandine Briand,
+            Sabrina Lah, Martin Merle, Claire Spada, Brigitte Segatori, Roubaud). Du lundi 04 octobre 2021 au vendredi
+            08 octobre 2021. <hi rend="it">Des reines sur une oeuvre d’art (Tenth Copper Corner une oeuvre minimaliste
+              de Carl André formée de 55 carreaux) : mathématiques et algorithmique</hi>. With Frédéric Havet, Nicolas
+            Nisse, Martine Olivi. En collaboration avec Geoffroy Aubry et Valérie Doya (atelier de Physique).</li>
+          <li>Intervention au collège La chênaie de Mouans-Sartoux Mercredi 06 octobre 2021. <hi rend="it">La magie des
+              graphes et du binaire – Pas besoin de réfléchir, les ordinateurs calculent tellement vite ? Problèmes
+              actuels en algorithmique</hi>. With Mylène Raibaudi, Brigitte Trousse.</li>
+          <li>Village des Sciences de Mouans-Sartoux Samedi 09 octobre 2021. Sabrina Barnabé, Martine Olivi, Brigitte
+            Trousse, Thierry Viéville.</li>
+          <li>Festival des sciences de Nice d’Université Côte d’Azur Samedi 09 octobre 2021 et dimanche 10 octobre 2021.
+            With Alexandre Bonlarron, Foivos Fioravantes, Victor Jung, Hicham Lesfari, Steve Malalel, Magali
+            Martin-Mazauric, Romain Michelucci, Nicolas Nisse, Marie Pelleau, Nina Singlan, Rudan Xiao.</li>
+          <li>Interventions au collège de Roquebillière Jeudi 07 octobre 2021. <hi rend="it">La magie des graphes et du
+              binaire – Jeux combinatoires – Pas besoin de réfléchir, les ordinateurs calculent tellement vite ?
+              Problèmes actuels en algorithmique – Ateliers Jeux Graphes et Algorithmes</hi>. With Samantha
+            Lanney-Ricci.</li>
+          <li>Conférence à la médiathèque de Biot Vendredi 08 octobre 2021.</li>
+          <li>Village des Sciences et de l’Innovation de la CASA à Antibes Juan-les-Pins Avec PoBot, SLV, @b4games.
+            Samedi 16 octobre 2021 et dimanche 17 octobre 2021. With Agnès Bessière, Armel Berceliot, Étienne Chaplain,
+            Thomas Dissaux, Thierry Lespinasse, Stéphane Mansour, Magali Martin-Mazauric, Nicolas Nisse, Eric Pascual,
+            Lucas Picassari-Arrieta, Frédéric Rallo, Sandrine Selosse, Brigitte Trousse.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - Interventions at Maison de l'Intelligence Artificielle:</p>
+        <simplelist>
+          <li>Ateliers Terra Numerica avec les étudiants du Master SmartEdTech. Mercredi 14 avril 2021. Journée
+            intensive de formation hybride et animation et co-création d’ateliers. With Saint-Clair Lefevre, Frédéric
+            Havet, Margarida Romero, Thierry Viéville.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - Cordées de la réussite (coordonné par Université Côte d'Azur):</p>
+        <simplelist>
+          <li>Deux classes du collège Henri Nans, Aups. Les sciences du numérique à portée de mains ! Découvrir,
+            Explorer, Expérimenter ! <hi rend="it">Pirates et trésor : des maths et des algorithmes à la programmation
+              Scratch et mBot</hi>. With Frédéric Havet, Eric Pascual, Brigitte Trousse.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - Programme Chiche:</p>
+        <simplelist>
+          <li>Intervention au lycée Apollinaire, Nice Jeudi 14 octobre 2021.</li>
+          <li>Intervention au lycée Estienne d’Orves, Nice Jeudi 21 octobre 2021.</li>
+          <li>Intervention au CIV, Valbonne Sophia Antipolis Jeudi 02 décembre 2021.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - Formations:</p>
+        <simplelist>
+          <li>Formation d’enseignants co-organisée par la DANE et Terra Numerica avec les ateliers Terra Numerica à la
+            Maison de l’intelligence Artificielle. Mardi 9 mars 2021, mardi 23 mars 2021, mardi 6 avril 2021, mardi 20
+            avril 2021, mardi 25 mai 2021. <hi rend="it">Machine d’apprentissage par renforcement pour gagner aux jeux,
+              Initiation à la reconnaissance d’images avec des drones, ateliers d’informatique débranchée</hi>. With
+            Jérémy Camponovo, Frédéric Havet, Eric Pascual, Brigitte Trousse.</li>
+          <li>Formation de personnels de médiathèques de la CASA. Vendredi 25 juin 2021, jeudi 23 septembre 2021.
+            Formation sur les <hi rend="it">fondements de l’informatique : Transmission de pensée – La magie du
+              binaire</hi>.</li>
+          <li>Présentation et formation au Fab’Ecole 06 de la DRANE, collège Bertone d’Antibes. Vendredi 26 novembre
+            2021. Présentation et formation sur des ateliers Terra Numerica. With Brigitte Trousse.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - In schools:</p>
+        <simplelist>
+          <li>Collège Bechet d’Antibes Juan-les-Pins Lundi 8 mars 2021. Dans le cadre du projet pédagogique Ethique des
+            données et de l’information (1/3). Introductions aux algorithmes. With Sylvain Etienne, Frédéric Giroire,
+            Géraldine Rouard, Brigitte Trousse.</li>
+          <li>Centre International de Valbonne Sophia Antipolis Lundi 15 mars 2021. Dans le cadre de séances autour de
+              l’<hi rend="it">Intelligence Artificielle</hi> avec une classe de terminale du CIV organisées par Les
+            Petits Débrouillards. Intelligence Artificielle et reconnaissance d’images. With Marie Barbieux, Marine
+            Beaudet, Soledad Tolosa.</li>
+          <li>Collège Bechet d’Antibes Juan-les-Pins Vendredi 26 mars 2021 et 9 avril 2021. Dans le cadre du projet
+            pédagogique Ethique des données et de l’information (2/3). <hi rend="it">Modélisation d’un réseau social et
+              de contenus, et algorithmes de recommandation</hi>. With Sylvain Etienne, Frédéric Giroire, Géraldine
+            Rouard, Brigitte Trousse.</li>
+          <li>Collège Bechet d’Antibes Juan-les-Pins Lundi 7 juin 2021. Dans le cadre du projet pédagogique Ethique des
+            données et de l’information (3/3). Conférence <hi rend="it">Protection des données et métier de Déléguée à
+              la Protection des Données d’Inria</hi> (Anne Combe). With Anne Combe, Sylvain Etienne, Frédéric Giroire,
+            Géraldine Rouard, Brigitte Trousse.</li>
+          <li>Roquefort-les-Pins Dans le cadre des activités du centre aéré de la commune. Lundi 26 juillet 2021 et
+            mardi 27 juillet 2021. Trois demi-journées : <hi rend="it">ateliers d’informatique débranchée (pour les 3 à
+              6 ans), ateliers pour découvrir les algorithmes de recommandation dans les réseaux sociaux (pour les
+              adolescents) et tours de magie pour découvrir comment l’ordinateur compte (pour les 6 à 10 ans)</hi>. With
+            Frédéric Havet.</li>
+          <li>Lycée Internationale de Valbonne Jeudi 02 décembre 2021. <hi rend="it">Ateliers algorithmiques grandeur
+              nature</hi>. With Bérengère Abric, Perrine Le Dûs.</li>
+        </simplelist>
+        <p noindent="true">Dorian Mazauric - Internships:</p>
+        <simplelist>
+          <li>Treize stagiaires de troisième au centre Inria d’Université Côte d’Azur Du lundi 13 décembre au vendredi
+            17 décembre 2021.</li>
+        </simplelist>
+      </subsection>
+    </subsection>
+  </diffusion>
+  <biblio html="bibliography" numero="10" titre="Scientific production" id="ABS-RA-2021-cid10">
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-bermond-hal-01977266" rend="refer"
+      n="refercite:m:bermond:hal-01977266">
+      <identifiant type="hal" value="hal-01977266"/>
+      <identifiant type="doi" value="10.1142/S1793830920500585%EF%BB%BF"/>
+      <analytic>
+        <title level="a">Distributed Link Scheduling in Wireless Networks</title>
+        <author>
+          <persName>
+            <initial>V.</initial>
+            <foreName>Vishal</foreName>
+            <persName>Misra</persName>
+          </persName>
+          <persName>
+            <initial>P.</initial>
+            <foreName>Philippe</foreName>
+            <persName>Nain</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Discrete Mathematics, Algorithms and Applications</title>
+        <imprint>
+          <date>2020</date>
+          <biblScope type="volume">12</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">1-38</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-boissonnat-hal-01259806" rend="refer"
+      n="refercite:m:boissonnat:hal-01259806">
+      <identifiant type="hal" value="hal-01259806"/>
+      <identifiant type="doi" value="10.1016/j.tcs.2015.12.034"/>
+      <analytic>
+        <title level="a">On the complexity of the representation of simplicial complexes by trees</title>
+        <author>
+          <persName>
+            <initial>J.-D.</initial>
+            <foreName>Jean-Daniel</foreName>
+            <persName>Boissonnat</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Theoretical Computer Science</title>
+        <imprint>
+          <date>February 2016</date>
+          <biblScope type="volume">617</biblScope>
+          <biblScope type="pages">17</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-energy2016carr" rend="refer" n="refercite:m:energy2016carr">
+      <identifiant type="doi" value="10.1063/1.4941052"/>
+      <analytic>
+        <title level="a">Energy landscapes and persistent minima</title>
+        <author>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.</foreName>
+            <persName>Carr</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F.</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>D. J.</initial>
+            <foreName>D. J.</foreName>
+            <persName>Wales</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">The Journal of Chemical Physics</title>
+        <imprint>
+          <date>2016</date>
+          <biblScope type="volume">144</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">4</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-cazals2015conformational" rend="refer"
+      n="refercite:m:cazals2015conformational">
+      <identifiant type="doi" value="10.1002/jcc.23913"/>
+      <analytic>
+        <title level="a">Conformational Ensembles and Sampled Energy Landscapes: Analysis and Comparison</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F.</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>T.</initial>
+            <foreName>T.</foreName>
+            <persName>Dreyfus</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Roth</persName>
+          </persName>
+          <persName>
+            <initial>C.</initial>
+            <foreName>C.H.</foreName>
+            <persName>Robert</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">J. of Computational Chemistry</title>
+        <imprint>
+          <date>2015</date>
+          <biblScope type="volume">36</biblScope>
+          <biblScope type="number">16</biblScope>
+          <biblScope type="pages">1213--1231</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="report" id="ABS-RA-2021_bibitem_m-cazals-hal-01379635" rend="refer"
+      n="refercite:m:cazals:hal-01379635">
+      <identifiant type="hal" value="hal-01379635"/>
+      <analytic>
+        <title level="a">The Structural Bioinformatics Library: modeling in biomolecular science and beyond</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>T.</initial>
+            <foreName>Tom</foreName>
+            <persName>Dreyfus</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>October 2016</date>
+          <biblScope type="number">RR-8957</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="inproceedings" id="ABS-RA-2021_bibitem_m-cazals-hal-01245408" rend="refer"
+      n="refercite:m:cazals:hal-01245408">
+      <identifiant type="hal" value="hal-01245408"/>
+      <analytic>
+        <title level="a">Beyond Two-sample-tests: Localizing Data Discrepancies in High-dimensional Spaces</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="s">IEEE/ACM International Conference on Data Science and Advanced Analytics</title>
+        <title level="m">IEEE/ACM International Conference on Data Science and Advanced Analytics</title>
+        <loc>Paris, France</loc>
+        <imprint>
+          <date>March 2015</date>
+          <biblScope type="pages">29</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="inproceedings" id="ABS-RA-2021_bibitem_m-cazals-hal-02425602" rend="refer"
+      n="refercite:m:cazals:hal-02425602">
+      <identifiant type="hal" value="hal-02425602"/>
+      <analytic>
+        <title level="a">Low-Complexity Nonparametric Bayesian Online Prediction with Universal Guarantees</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="m">NeurIPS 2019 - Thirty-third Conference on Neural Information Processing Systems</title>
+        <loc>Vancouver, Canada</loc>
+        <imprint>
+          <date>December 2019</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-cazals-hal-02425599" rend="refer"
+      n="refercite:m:cazals:hal-02425599">
+      <identifiant type="hal" value="hal-02425599"/>
+      <identifiant type="doi" value="10.1145/3345951"/>
+      <analytic>
+        <title level="a">Comparing Two Clusterings Using Matchings between Clusters of Clusters</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>Dorian</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>Romain</foreName>
+            <persName>Tetley</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>Rémi</foreName>
+            <persName>Watrigant</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">ACM Journal of Experimental Algorithmics</title>
+        <imprint>
+          <date>December 2019</date>
+          <biblScope type="volume">24</biblScope>
+          <biblScope type="number">1</biblScope>
+          <biblScope type="pages">1-41</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-cohen-hal-01947563" rend="refer"
+      n="refercite:m:cohen:hal-01947563">
+      <identifiant type="hal" value="hal-01947563"/>
+      <identifiant type="doi" value="10.1016/j.jda.2018.11.010"/>
+      <analytic>
+        <title level="a">Complexity dichotomies for the Minimum F -Overlay problem</title>
+        <author/>
+      </analytic>
+      <monogr>
+        <title level="j">Journal of Discrete Algorithms</title>
+        <imprint>
+          <date>September 2018</date>
+          <biblScope type="volume">52-53</biblScope>
+          <biblScope type="pages">133-142</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-lheritier-hal-01968190" rend="refer"
+      n="refercite:m:lheritier:hal-01968190">
+      <identifiant type="hal" value="hal-01968190"/>
+      <analytic>
+        <title level="a">A Sequential Non-Parametric Multivariate Two-Sample Test</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">IEEE Transactions on Information Theory</title>
+        <imprint>
+          <date>May 2018</date>
+          <biblScope type="volume">64</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">3361-3370</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="report" id="ABS-RA-2021_bibitem_m-marillet-hal-01159641" rend="refer"
+      n="refercite:m:marillet:hal-01159641">
+      <identifiant type="hal" value="hal-01159641"/>
+      <analytic>
+        <title level="a">High Resolution Crystal Structures Leverage Protein Binding Affinity Predictions</title>
+        <author>
+          <persName>
+            <initial>S.</initial>
+            <foreName>Simon</foreName>
+            <persName>Marillet</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>March 2015</date>
+          <biblScope type="number">RR-8733</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-marillet-hal-01675467" rend="refer"
+      n="refercite:m:marillet:hal-01675467">
+      <identifiant type="hal" value="hal-01675467"/>
+      <identifiant type="doi" value="10.3389/fimmu.2017.00034"/>
+      <analytic>
+        <title level="a">Novel Structural Parameters of Ig–Ag Complexes Yield a Quantitative Description of Interaction
+          Specificity and Binding Affinity</title>
+        <author>
+          <persName>
+            <initial>S.</initial>
+            <foreName>Simon</foreName>
+            <persName>Marillet</persName>
+          </persName>
+          <persName>
+            <initial>M.-P.</initial>
+            <foreName>Marie-Paule</foreName>
+            <persName>Lefranc</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Frontiers in Immunology</title>
+        <imprint>
+          <date>February 2017</date>
+          <biblScope type="volume">8</biblScope>
+          <biblScope type="pages">34</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-roth2016hybridizing" rend="refer"
+      n="refercite:m:roth2016hybridizing">
+      <identifiant type="doi" value="10.1002/jcc.24256"/>
+      <analytic>
+        <title level="a">Hybridizing rapidly growing random trees and basin hopping yields an improved exploration of
+          energy landscapes</title>
+        <author>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Roth</persName>
+          </persName>
+          <persName>
+            <initial>T.</initial>
+            <foreName>T.</foreName>
+            <persName>Dreyfus</persName>
+          </persName>
+          <persName>
+            <initial>C.</initial>
+            <foreName>C.H.</foreName>
+            <persName>Robert</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F.</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">J. Comp. Chem.</title>
+        <imprint>
+          <date>2016</date>
+          <biblScope type="volume">37</biblScope>
+          <biblScope type="number">8</biblScope>
+          <biblScope type="pages">739--752</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_m-simsir-hal-03006981" rend="refer"
+      n="refercite:m:simsir:hal-03006981">
+      <identifiant type="hal" value="hal-03006981"/>
+      <identifiant type="doi" value="10.1002/prot.26012"/>
+      <analytic>
+        <title level="a">Studying dynamics without explicit dynamics: A structure‐based study of the export mechanism by
+          AcrB</title>
+        <author>
+          <persName>
+            <initial>I.</initial>
+            <foreName>Isabelle</foreName>
+            <persName>Mus‐Veteau</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Proteins - Structure, Function and Bioinformatics</title>
+        <imprint>
+          <date>September 2020</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_bereux-hal-03387889" rend="year" n="cite:bereux:hal-03387889">
+      <identifiant type="hal" value="hal-03387889"/>
+      <analytic>
+        <title level="a">Boosting the analysis of protein interfaces with Multiple Interface String Alignments:
+          illustration on the spikes of coronaviruses</title>
+        <author>
+          <persName>
+            <initial>S.</initial>
+            <foreName>Stéphane</foreName>
+            <persName>Bereux</persName>
+          </persName>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B</foreName>
+            <persName>Delmas</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Proteins - Structure, Function and Bioinformatics</title>
+        <imprint>
+          <date>November 2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_chevallier-hal-03048725" rend="year"
+      n="cite:chevallier:hal-03048725">
+      <identifiant type="hal" value="hal-03048725"/>
+      <analytic>
+        <title level="a">Improved polytope volume calculations based on Hamiltonian Monte Carlo with boundary
+          reflections and sweet arithmetics</title>
+        <author>
+          <persName>
+            <initial>A.</initial>
+            <foreName>Augustin</foreName>
+            <persName>Chevallier</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Journal of Computational Geometry</title>
+        <imprint>
+          <date>2022</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_odonnell-hal-03232851" rend="year" n="cite:odonnell:hal-03232851">
+      <identifiant type="hal" value="hal-03232851"/>
+      <analytic>
+        <title level="a">Tripeptide loop closure: a detailed study of reconstructions based on Ramachandran
+          distributions</title>
+        <author>
+          <persName>
+            <initial>T.</initial>
+            <foreName>T</foreName>
+            <persName>O'donnell</persName>
+          </persName>
+          <persName>
+            <initial>C. H.</initial>
+            <foreName>C H</foreName>
+            <persName>Robert</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Proteins - Structure, Function and Bioinformatics</title>
+        <imprint>
+          <date>2022</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="inproceedings" id="ABS-RA-2021_bibitem_cazals-hal-03183028" rend="year"
+      n="cite:cazals:hal-03183028">
+      <identifiant type="hal" value="hal-03183028"/>
+      <analytic>
+        <title level="a">Fréchet mean and <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><mi>p</mi></math></formula>-mean on the unit circle: decidability, algorithm, and applications to
+          clustering on the flat torus</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B</foreName>
+            <persName>Delmas</persName>
+          </persName>
+          <persName>
+            <initial>T.</initial>
+            <foreName>Timothee</foreName>
+            <persName>O'donnell</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="m">SEA 2021 - 19th Symposium on Experimental Algorithms</title>
+        <loc>Sophia Antipolis, France</loc>
+        <imprint>
+          <date>June 2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="thesis" id="ABS-RA-2021_bibitem_mazauric-tel-03506086" rend="year" n="cite:mazauric:tel-03506086">
+      <identifiant type="hal" value="tel-03506086"/>
+      <analytic>
+        <title level="a">Graph Algorithm Techniques for Networks and Computational Structural Biology</title>
+        <author/>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>November 2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="thesis" id="ABS-RA-2021_bibitem_nguyen-hal-03510188" rend="year" n="cite:nguyen:hal-03510188">
+      <identifiant type="hal" value="hal-03510188"/>
+      <analytic>
+        <title level="a">Graph problems motivated by (low and high) resolution models of large protein
+          assemblies</title>
+        <author>
+          <persName>
+            <initial>V.-H.</initial>
+            <foreName>Viet-Ha</foreName>
+            <persName>Nguyen</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>December 2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="report" id="ABS-RA-2021_bibitem_alizon-hal-03170023" rend="year" n="cite:alizon:hal-03170023">
+      <identifiant type="hal" value="hal-03170023"/>
+      <analytic>
+        <title level="a">SARS-CoV-2 Through the Lens of Computational Biology:How bioinformatics is playing a key role
+          in the study of the virus and its origins</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>March 2021</date>
+          <biblScope type="pages">1-35</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="report" id="ABS-RA-2021_bibitem_havet-hal-03368214" rend="year" n="cite:havet:hal-03368214">
+      <identifiant type="hal" value="hal-03368214"/>
+      <analytic>
+        <title level="a">On the complexity of overlaying a hypergraph with a graph with bounded maximum degree</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Havet</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>Dorian</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>V.-H.</initial>
+            <foreName>Viet-Ha</foreName>
+            <persName>Nguyen</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="misc" id="ABS-RA-2021_bibitem_lemoigne-hal-03521911" rend="year" n="cite:lemoigne:hal-03521911">
+      <identifiant type="hal" value="hal-03521911"/>
+      <identifiant type="doi" value="10.1101/2021.12.28.474321"/>
+      <analytic>
+        <title level="a">Crystal structure of chloroplast fructose-1,6-bisphosphate aldolase from the green alga
+          Chlamydomonas reinhardtii</title>
+        <author>
+          <persName>
+            <initial>T.</initial>
+            <foreName>Théo</foreName>
+            <persName>Le Moigne</persName>
+          </persName>
+          <persName>
+            <initial>E.</initial>
+            <foreName>Edoardo</foreName>
+            <persName>Sarti</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>Antonin</foreName>
+            <persName>Nourisson</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>Alessandra</foreName>
+            <persName>Carbone</persName>
+          </persName>
+          <persName>
+            <initial>J.</initial>
+            <foreName>Julien</foreName>
+            <persName>Henri</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>January 2022</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="misc" id="ABS-RA-2021_bibitem_salesdequeiroz-hal-03438430" rend="year"
+      n="cite:salesdequeiroz:hal-03438430">
+      <identifiant type="hal" value="hal-03438430"/>
+      <analytic>
+        <title level="a">Gene prioritization based on random walks with restarts and absorbing states, to define gene
+          sets regulating drug pharmacodynamics from single-cell analyses</title>
+        <author>
+          <persName>
+            <initial>A.</initial>
+            <foreName>Augusto</foreName>
+            <persName>Sales-De-Queiroz</persName>
+          </persName>
+          <persName>
+            <initial>G. G.</initial>
+            <foreName>Guilherme Guilherme</foreName>
+            <persName>Sales Santa Cruz</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>Alain</foreName>
+            <persName>Jean-Marie</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>Dorian</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>Frédéric</foreName>
+            <persName>Cazals</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>November 2021</date>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_adcock2006molecular" rend="foot" n="footcite:adcock2006molecular">
+      <analytic>
+        <title level="a">Molecular dynamics: survey of methods for simulating the activity of proteins</title>
+        <author>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.A.</foreName>
+            <persName>Adcock</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.J.</foreName>
+            <persName>McCammon</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Chemical reviews</title>
+        <imprint>
+          <date>2006</date>
+          <biblScope type="volume">106</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">1589--1615</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_aal-manpc-07" rend="foot" n="footcite:aal-manpc-07">
+      <analytic>
+        <title level="a">The molecular architecture of the nuclear pore complex</title>
+        <author>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F.</foreName>
+            <persName>Alber</persName>
+          </persName>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.</foreName>
+            <persName>Dokudovskaya</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.M.</foreName>
+            <persName>Veenhoff</persName>
+          </persName>
+          <persName>
+            <initial>W.</initial>
+            <foreName>W.</foreName>
+            <persName>Zhang</persName>
+          </persName>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.</foreName>
+            <persName>Kipper</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Devos</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Suprapto</persName>
+          </persName>
+          <persName>
+            <initial>O.</initial>
+            <foreName>O.</foreName>
+            <persName>Karni-Schmidt</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>R.</foreName>
+            <persName>Williams</persName>
+          </persName>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B.T.</foreName>
+            <persName>Chait</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Sali</persName>
+          </persName>
+          <persName>
+            <initial>M.</initial>
+            <foreName>M.P.</foreName>
+            <persName>Rout</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Nature</title>
+        <imprint>
+          <date>2007</date>
+          <biblScope type="volume">450</biblScope>
+          <biblScope type="number">7170</biblScope>
+          <biblScope type="pages">695--701</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_ball1999dynamics" rend="foot" n="footcite:ball1999dynamics">
+      <analytic>
+        <title level="a">Dynamics on statistical samples of potential energy surfaces</title>
+        <author>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.D.</foreName>
+            <persName>Ball</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>R.S.</foreName>
+            <persName>Berry</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">The Journal of chemical physics</title>
+        <imprint>
+          <date>1999</date>
+          <biblScope type="volume">111</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">2060--2070</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="book" id="ABS-RA-2021_bibitem_callen1985thermodynamics" rend="foot"
+      n="footcite:callen1985thermodynamics">
+      <analytic>
+        <title level="a">Thermodynamics and an Introduction to Thermostatistics</title>
+        <author>
+          <persName>
+            <initial>H.</initial>
+            <foreName>H.B.</foreName>
+            <persName>Callen</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>1985</date>
+          <publisher>Wiley</publisher>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_cao2020novo" rend="foot" n="footcite:cao2020novo">
+      <analytic>
+        <title level="a">De novo design of picomolar SARS-CoV-2 miniprotein inhibitors</title>
+        <author>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Cao</persName>
+          </persName>
+          <persName>
+            <initial>I.</initial>
+            <foreName>I.</foreName>
+            <persName>Goreshnik</persName>
+          </persName>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B.</foreName>
+            <persName>Coventry</persName>
+          </persName>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.B.</foreName>
+            <persName>Case</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Miller</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Kozodoy</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>R.</foreName>
+            <persName>Chen</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Carter</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Walls</persName>
+          </persName>
+          <persName>
+            <initial>Y.-J.</initial>
+            <foreName>Y-J.</foreName>
+            <persName>Park</persName>
+          </persName>
+          <persName>
+            <initial>E.-M.</initial>
+            <foreName>E-M</foreName>
+            <persName>Strauch</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Stewart</persName>
+          </persName>
+          <persName>
+            <initial>M.</initial>
+            <foreName>M.S.</foreName>
+            <persName>Diamond</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Veesler</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Baker</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Science</title>
+        <imprint>
+          <date>2020</date>
+          <biblScope type="volume">370</biblScope>
+          <biblScope type="number">6515</biblScope>
+          <biblScope type="pages">426--431</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_energy2016carr" rend="foot" n="footcite:energy2016carr">
+      <identifiant type="doi" value="10.1063/1.4941052"/>
+      <analytic>
+        <title level="a">Energy landscapes and persistent minima</title>
+        <author>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.</foreName>
+            <persName>Carr</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Mazauric</persName>
+          </persName>
+          <persName>
+            <initial>F.</initial>
+            <foreName>F.</foreName>
+            <persName>Cazals</persName>
+          </persName>
+          <persName>
+            <initial>D. J.</initial>
+            <foreName>D. J.</foreName>
+            <persName>Wales</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">The Journal of Chemical Physics</title>
+        <imprint>
+          <date>2016</date>
+          <biblScope type="volume">144</biblScope>
+          <biblScope type="number">5</biblScope>
+          <biblScope type="pages">4</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_cousins2016practical" rend="foot"
+      n="footcite:cousins2016practical">
+      <analytic>
+        <title level="a">A practical volume algorithm</title>
+        <author>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B.</foreName>
+            <persName>Cousins</persName>
+          </persName>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.</foreName>
+            <persName>Vempala</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Mathematical Programming Computation</title>
+        <imprint>
+          <date>2016</date>
+          <biblScope type="volume">8</biblScope>
+          <biblScope type="number">2</biblScope>
+          <biblScope type="pages">133--160</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="book" id="ABS-RA-2021_bibitem_frenkel2002understanding" rend="foot"
+      n="footcite:frenkel2002understanding">
+      <analytic>
+        <title level="a">Understanding molecular simulation</title>
+        <author>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Frenkel</persName>
+          </persName>
+          <persName>
+            <initial>B.</initial>
+            <foreName>B.</foreName>
+            <persName>Smit</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>2002</date>
+          <publisher>Academic Press</publisher>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_kannan1997random" rend="foot" n="footcite:kannan1997random">
+      <analytic>
+        <title level="a">Random walks and an <formula type="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                    ><mrow><msup><mi>O</mi>
+                  <mo>*</mo>
+                </msup><mrow><mo>(</mo></mrow><msup><mi>n</mi>
+                  <mn>5</mn>
+                </msup></mrow></math></formula>) volume algorithm for convex bodies</title>
+        <author>
+          <persName>
+            <initial>R.</initial>
+            <foreName>R.</foreName>
+            <persName>Kannan</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Lovász</persName>
+          </persName>
+          <persName>
+            <initial>M.</initial>
+            <foreName>M.</foreName>
+            <persName>Simonovits</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Random Structures &amp; Algorithms</title>
+        <imprint>
+          <date>1997</date>
+          <biblScope type="volume">11</biblScope>
+          <biblScope type="number">1</biblScope>
+          <biblScope type="pages">1--50</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="book" id="ABS-RA-2021_bibitem_landau2014guide" rend="foot" n="footcite:landau2014guide">
+      <analytic>
+        <title level="a">A guide to Monte Carlo simulations in statistical physics</title>
+        <author>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Landau</persName>
+          </persName>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.</foreName>
+            <persName>Binder</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>2014</date>
+          <publisher>Cambridge university press</publisher>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="book" id="ABS-RA-2021_bibitem_lelievre2010free" rend="foot" n="footcite:lelievre2010free">
+      <analytic>
+        <title level="a">Free energy computations: A mathematical perspective</title>
+        <author>
+          <persName>
+            <initial>T.</initial>
+            <foreName>T.</foreName>
+            <persName>Lelièvre</persName>
+          </persName>
+          <persName>
+            <initial>G.</initial>
+            <foreName>G.</foreName>
+            <persName>Stoltz</persName>
+          </persName>
+          <persName>
+            <initial>M.</initial>
+            <foreName>M.</foreName>
+            <persName>Rousset</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>2010</date>
+          <publisher>World Scientific</publisher>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_schon2009prediction" rend="foot" n="footcite:schon2009prediction">
+      <analytic>
+        <title level="a">Prediction, determination and validation of phase diagrams via the global study of energy
+          landscapes</title>
+        <author>
+          <persName>
+            <initial>C.</initial>
+            <foreName>C.</foreName>
+            <persName>Schön</persName>
+          </persName>
+          <persName>
+            <initial>M.</initial>
+            <foreName>M.</foreName>
+            <persName>Jansen</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Int. J. of Materials Research</title>
+        <imprint>
+          <date>2009</date>
+          <biblScope type="volume">100</biblScope>
+          <biblScope type="number">2</biblScope>
+          <biblScope type="pages">135</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_senior2020improved" rend="foot" n="footcite:senior2020improved">
+      <analytic>
+        <title level="a">Improved protein structure prediction using potentials from deep learning</title>
+        <author>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Senior</persName>
+          </persName>
+          <persName>
+            <initial>R.</initial>
+            <foreName>R.</foreName>
+            <persName>Evans</persName>
+          </persName>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.</foreName>
+            <persName>Jumper</persName>
+          </persName>
+          <persName>
+            <initial>J.</initial>
+            <foreName>J.</foreName>
+            <persName>Kirkpatrick</persName>
+          </persName>
+          <persName>
+            <initial>L.</initial>
+            <foreName>L.</foreName>
+            <persName>Sifre</persName>
+          </persName>
+          <persName>
+            <initial>T.</initial>
+            <foreName>T.</foreName>
+            <persName>Green</persName>
+          </persName>
+          <persName>
+            <initial>C.</initial>
+            <foreName>C.</foreName>
+            <persName>Qin</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Żídek</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Nelson</persName>
+          </persName>
+          <persName>
+            <initial>A.</initial>
+            <foreName>A.</foreName>
+            <persName>Bridgland</persName>
+          </persName>
+          <persName>
+            <initial>H.</initial>
+            <foreName>H.</foreName>
+            <persName>Penedones</persName>
+          </persName>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.</foreName>
+            <persName>Petersen</persName>
+          </persName>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.</foreName>
+            <persName>Simonyan</persName>
+          </persName>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.</foreName>
+            <persName>Crossan</persName>
+          </persName>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.</foreName>
+            <persName>Pushmeet</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Jones</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Silver</persName>
+          </persName>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.</foreName>
+            <persName>Kavukcuoglu</persName>
+          </persName>
+          <persName>
+            <initial>D.</initial>
+            <foreName>D.</foreName>
+            <persName>Hassabis</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Nature</title>
+        <imprint>
+          <date>2020</date>
+          <biblScope type="pages">1--5</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_shaw2010atomic" rend="foot" n="footcite:shaw2010atomic">
+      <analytic>
+        <title level="a">Atomic-level characterization of the structural dynamics of proteins.</title>
+        <author>
+          <persName>
+            <initial>D. E.</initial>
+            <foreName>D. E.</foreName>
+            <persName>Shaw</persName>
+          </persName>
+          <persName>
+            <initial>P.</initial>
+            <foreName>P.</foreName>
+            <persName>Maragakis</persName>
+          </persName>
+          <persName>
+            <initial>K.</initial>
+            <foreName>K.</foreName>
+            <persName>Lindorff-Larsen</persName>
+          </persName>
+          <persName>
+            <initial>S.</initial>
+            <foreName>S.</foreName>
+            <persName>Piana</persName>
+          </persName>
+          <persName>
+            <initial>R. O.</initial>
+            <foreName>R. O.</foreName>
+            <persName>Dror</persName>
+          </persName>
+          <persName>
+            <initial>M. P.</initial>
+            <foreName>M. P.</foreName>
+            <persName>Eastwood</persName>
+          </persName>
+          <persName>
+            <initial>J. A.</initial>
+            <foreName>J. A.</foreName>
+            <persName>Bank</persName>
+          </persName>
+          <persName>
+            <initial>J. M.</initial>
+            <foreName>J. M.</foreName>
+            <persName>Jumper</persName>
+          </persName>
+          <persName>
+            <initial>J. K.</initial>
+            <foreName>J. K.</foreName>
+            <persName>Salmon</persName>
+          </persName>
+          <persName>
+            <initial>Y.</initial>
+            <foreName>Y.</foreName>
+            <persName>Shan</persName>
+          </persName>
+          <persName>
+            <initial>W.</initial>
+            <foreName>W.</foreName>
+            <persName>Wriggers</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">Science</title>
+        <imprint>
+          <date>2010</date>
+          <biblScope type="volume">330</biblScope>
+          <biblScope type="number">6002</biblScope>
+          <biblScope type="pages">341--346</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="book" id="ABS-RA-2021_bibitem_wales2003energy" rend="foot" n="footcite:wales2003energy">
+      <analytic>
+        <title level="a">Energy Landscapes</title>
+        <author>
+          <persName>
+            <initial>D. J.</initial>
+            <foreName>D. J.</foreName>
+            <persName>Wales</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <imprint>
+          <date>2003</date>
+          <publisher>Cambridge University Press</publisher>
+        </imprint>
+      </monogr>
+    </biblStruct>
+    <biblStruct type="article" id="ABS-RA-2021_bibitem_wang2014building" rend="foot" n="footcite:wang2014building">
+      <analytic>
+        <title level="a">Building force fields: an automatic, systematic, and reproducible approach</title>
+        <author>
+          <persName>
+            <initial>L.-P.</initial>
+            <foreName>Lee-Ping</foreName>
+            <persName>Wang</persName>
+          </persName>
+          <persName>
+            <initial>T. J.</initial>
+            <foreName>Todd J</foreName>
+            <persName>Martinez</persName>
+          </persName>
+          <persName>
+            <initial>V. S.</initial>
+            <foreName>Vijay S</foreName>
+            <persName>Pande</persName>
+          </persName>
+        </author>
+      </analytic>
+      <monogr>
+        <title level="j">The journal of physical chemistry letters</title>
+        <imprint>
+          <date>2014</date>
+          <biblScope type="volume">5</biblScope>
+          <biblScope type="number">11</biblScope>
+          <biblScope type="pages">1885--1891</biblScope>
+        </imprint>
+      </monogr>
+    </biblStruct>
+  </biblio>
+</raweb>
