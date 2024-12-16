@@ -1,5 +1,5 @@
 :root {
-    --md-primary-fg-color:        #C9191E; /* Main primary color, used for key elements like links, buttons, and titles */
+    --md-primary-fg-color:        #C9191E; /* Main primary color, used for key elements like links, buttons, and title */
     --md-primary-fg-color--light: #F36B6E; /* Lighter variant, used for hover states or light backgrounds */
     --md-primary-fg-color--dark:  #8E1216; /* Darker variant, used for active states or in dark themes */
   }

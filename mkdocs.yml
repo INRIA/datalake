@@ -5,7 +5,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 theme:
-  name: material  # Specifies the theme to be used, here it's "Material" for MkDocs.
+  name: material  # Specifies the theme to be used, here it's "Material" for MkDoc.
   language: en  # Sets the default language for the theme. Here, it's English.
   palette:
     primary: custom  # Indicates that a custom primary color will be used in the palette.
