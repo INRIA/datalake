@@ -64,7 +64,7 @@
             subsection | presentation | fondements
             | diffusion | domain | highlights
             | resultats | logiciels | partenariat
-            | domaine">
+            | domaine | responsability">
         <!-- On drope le @level pour l'instant, en attendant de 
             savoir ce qu'il veut dire -->
         <div type="{name()}" xml:id="{@id}">
@@ -146,7 +146,10 @@
 
     <xsl:template match="hi | p | imprint | title | author | persName | date | publisher | term | label">
         <xsl:element name="{name()}" namespace="http://www.tei-c.org/ns/1.0">
-            <xsl:copy-of select="@* except @noindent"/>
+            <xsl:if test="@hal_url">
+                <xsl:attribute name="corresp" select="@hal_url"/>
+            </xsl:if>
+            <xsl:copy-of select="@* except (@noindent, @hal_url)"/>
             <xsl:if test="@noindent = 'true'">
                 <xsl:attribute name="rend" select="'noindent'"/>
             </xsl:if>
@@ -230,7 +233,7 @@
         </forename>
     </xsl:template>
 
-    <xsl:template match="lastname">
+    <xsl:template match="lastname | surname">
         <surname>
             <xsl:apply-templates/>
         </surname>
@@ -276,6 +279,12 @@
         </list>
     </xsl:template>
 
+    <xsl:template match="orderedlist">
+        <list type="ordered">
+            <xsl:apply-templates/>
+        </list>
+    </xsl:template>
+    
     <xsl:template match="li">
         <item>
             <xsl:apply-templates/>
@@ -363,6 +372,7 @@
         </date>
     </xsl:template>
     
+
     
     
 
