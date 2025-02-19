@@ -64,7 +64,7 @@
             subsection | presentation | fondements
             | diffusion | domain | highlights
             | resultats | logiciels | partenariat
-            | domaine | responsability">
+            | domaine | responsability | contrats">
         <!-- On drope le @level pour l'instant, en attendant de 
             savoir ce qu'il veut dire -->
         <div type="{name()}" xml:id="{@id}">
@@ -75,7 +75,7 @@
 
     <xsl:template match="identification">
         <div type="{name()}" xml:id="{@id}">
-            <xsl:copy-of select="@* except (@id,@isproject)"/>
+            <xsl:copy-of select="@* except (@id, @isproject)"/>
             <listOrg>
                 <org type="{LeTypeProjet}">
                     <xsl:apply-templates select="shortname, projectName"/>
@@ -105,7 +105,21 @@
             <xsl:if test="@titre">
                 <head>{@titre}</head>
             </xsl:if>
-            <xsl:apply-templates/>
+            <!-- <biblStruct type="inproceedings" id="ALMANACH-RA-2023_bibitem_m-chague-hal-04094233" rend="refer" subsection="Major publications" n="refer:"> -->
+            <xsl:for-each-group select="biblStruct" group-by="@subsection">
+                <div type="{translate(current-grouping-key(),' ','')}">
+                    <xsl:choose>
+                        <xsl:when test="current-group()/@subsubsection">
+                            <xsl:for-each-group select="current-group()" group-by="@subsubsection">
+                                <div type="{translate(current-grouping-key(),' ','')}">
+                                    <xsl:apply-templates select="current-group()"/>
+                                </div>
+                            </xsl:for-each-group>
+                        </xsl:when>
+                    <xsl:otherwise><xsl:apply-templates select="current-group()"/></xsl:otherwise>
+                </xsl:choose>
+                </div>
+            </xsl:for-each-group>
         </div>
     </xsl:template>
 
@@ -147,7 +161,7 @@
     <xsl:template match="hi | p | imprint | title | author | persName | date | publisher | term | label">
         <xsl:element name="{name()}" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:if test="@hal_url">
-                <xsl:attribute name="corresp" select="@hal_url"/>
+                <xsl:attribute name="ref" select="@hal_url"/>
             </xsl:if>
             <xsl:copy-of select="@* except (@noindent, @hal_url)"/>
             <xsl:if test="@noindent = 'true'">
@@ -157,12 +171,15 @@
         </xsl:element>
     </xsl:template>
 
+    <!-- Cas particulier des paragraphes vides qui peuvent trainer -->
+    <xsl:template match="p[not(normalize-space())]"/>
+
     <xsl:template match="ref">
         <ref type="{@xlink:type}" target="{@xlink:href}">
             <xsl:apply-templates/>
         </ref>
     </xsl:template>
-    
+
     <xsl:template match="descriptionlist">
         <list type="descriptionlist">
             <xsl:apply-templates/>
@@ -171,7 +188,7 @@
 
     <xsl:template match="biblStruct">
         <biblStruct>
-            <xsl:copy-of select="@* except @id"/>
+            <xsl:copy-of select="@* except (@id,@subsection,@subsubsection)"/>
             <xsl:attribute name="xml:id" select="@id"/>
             <xsl:apply-templates select="* except identifiant"/>
         </biblStruct>
@@ -202,12 +219,22 @@
         </idno>
     </xsl:template>
 
-    <xsl:template match="formula">
-        <xsl:element name="{name()}" namespace="http://www.tei-c.org/ns/1.0">
+    <xsl:template match="formula[@type = 'inline']">
+        <formula>
             <xsl:copy-of select="@* except @type"/>
             <xsl:attribute name="rend" select="@type"/>
             <xsl:apply-templates/>
-        </xsl:element>
+        </formula>
+    </xsl:template>
+
+    <!-- <formula textype="equation" type="display" id-text="1"> -->
+    <xsl:template match="formula[@type = 'display']">
+        <figure>
+            <formula>
+                <xsl:attribute name="rend" select="@type"/>
+                <xsl:apply-templates/>
+            </formula>
+        </figure>
     </xsl:template>
 
     <!-- On gère les enfants de <person> -->
@@ -245,12 +272,26 @@
         </education>
     </xsl:template>
 
+    <!-- Apprait dans la caractérisation d'une personne, cf. ABS-RA-2021-cid1 -->
     <xsl:template match="research-centre">
         <affiliation>
             <orgName type="research-center">
                 <xsl:apply-templates/>
             </orgName>
         </affiliation>
+    </xsl:template>
+
+    <!-- Apparait dans la caractérisation de l'équipe: <center type="main" id="PRO">Inria Paris Centre </center>, cf. ALMANACH-RA-2023-cid1 -->
+    <xsl:template match="center">
+        <orgName type="research-center">
+            <xsl:if test="@id">
+                <xsl:attribute name="key" select="@id"/>
+            </xsl:if>
+            <xsl:if test="@type">
+                <xsl:attribute name="role" select="@type"/>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </orgName>
     </xsl:template>
 
     <xsl:template match="moreinfo">
@@ -284,7 +325,7 @@
             <xsl:apply-templates/>
         </list>
     </xsl:template>
-    
+
     <xsl:template match="li">
         <item>
             <xsl:apply-templates/>
@@ -351,29 +392,29 @@
             </orgName>
         </org>
     </xsl:template>
-    
+
     <xsl:template match="identification/LeTypeProjet"/>
-    
+
     <xsl:template match="identification/theme-de-recherche">
         <term type="theme-de-recherche">
             <xsl:apply-templates/>
         </term>
     </xsl:template>
-    
+
     <xsl:template match="identification/domaine-de-recherche">
         <term type="domaine-de-recherche">
             <xsl:apply-templates/>
         </term>
     </xsl:template>
-    
+
     <xsl:template match="identification/header_dates_team">
         <date type="header_dates_team">
             <xsl:apply-templates/>
         </date>
     </xsl:template>
-    
 
-    
-    
+
+
+
 
 </xsl:stylesheet>
