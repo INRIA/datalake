@@ -36,5 +36,6 @@ Le notebook comprend les étapes suivantes :
    ```bash
    jupyter notebook verification_equipes_sans_adresse_aurehal.ipynb
    
-Auteur
-Notebook développé par steffynebot,
+## Auteur
+
+Projet développé par [Andréa Nébot](https://github.com/steffynebot), data analyst.
