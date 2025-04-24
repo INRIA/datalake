@@ -31,3 +31,10 @@ Le notebook comprend les étapes suivantes :
    ```bash
    git clone https://github.com/ton-repo/verification_equipes_sans_adresse_aurehal.git
    cd verification_equipes_sans_adresse_aurehal
+
+2. Ouvrir le notebook avec Jupyter :
+   ```bash
+   jupyter notebook verification_equipes_sans_adresse_aurehal.ipynb
+   
+Auteur
+Notebook développé par steffynebot,
