@@ -52,5 +52,5 @@ Pour plus de détails sur les paramètres disponibles et les fonctionnalités de
 
 ## Auteur
 
-Projet développé par [Andréa Nébot](https://github.com/steffynebot), data scientist spécialisée en scientométrie et analyse des publications scientifiques.
+Projet développé par [Andréa Nébot](https://github.com/steffynebot), data analyst.
 
