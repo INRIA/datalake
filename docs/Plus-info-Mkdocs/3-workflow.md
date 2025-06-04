@@ -23,33 +23,24 @@ définis (par exemple, sur `push`).
         - MkDocs et ses plugins (`mkdocs-material`, etc.).
         - Toute autre bibliothèque spécifiée dans le workflow.
 
-4. **Installation de l'environnement**
-
-    Dans un projet MkDocs, les étapes typiques incluent :
-
-    - Vérifier le code source en le clonant.
-    - Installer Python et les dépendances requises :
-        - MkDocs et ses plugins (`mkdocs-material`, etc.).
-        - Toute autre bibliothèque spécifiée dans le workflow.
-
-5. **Génération des fichiers statiques**
+4. **Génération des fichiers statiques**
 
     Une fois l'environnement prêt, la commande `mkdocs build` est
    exécutée pour convertir les fichiers Markdown en pages HTML statiques, selon la configuration définie dans `mkdocs.yml`.
 
-6. **Déploiement sur GitHub Pages**
+5. **Déploiement sur GitHub Pages**
 
     Si la branche concernée est `main`, la commande `mkdocs gh-deploy` est exécutée :
 
        - Elle génère et pousse les fichiers HTML vers la branche `gh-pages`.
        - GitHub Pages sert automatiquement ces fichiers comme un site web.
 
-7. **Mise à jour du site**
+6. **Mise à jour du site**
 
     Après le déploiement sur `gh-pages`, le site hébergé sur GitHub Pages
    (par ex. `https://inria.github.io/datalake/`) est automatiquement mis à jour avec les dernières modifications.
 
-8. **Notification et suivi**
+7. **Notification et suivi**
 
     GitHub affiche les logs du workflow dans l'onglet **Actions**, où vous pouvez
    vérifier le succès ou l'échec des différentes étapes. En cas de problème
