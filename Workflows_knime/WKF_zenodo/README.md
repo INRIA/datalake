@@ -1,4 +1,4 @@
-#  KNIME Workflow – Extraction et Analyse de Publications via l'API Zenodo
+#  Extraction et Analyse de Publications via l'API Zenodo
 
 Ce module Python s'intègre à un workflow KNIME pour automatiser la récupération et l’analyse de publications scientifiques depuis la plateforme **Zenodo**. Il constitue le point de départ d'un workflow plus vaste qui peut être enrichi par divers nœuds d'analyse, de visualisation et de transformation de données.
 
