@@ -1,4 +1,4 @@
-# 📚 KNIME Workflow – Exploitation de l'API HAL et Fichiers Locaux
+Exploitation de l'API HAL et Fichiers Locaux
 
 Ce workflow KNIME présente plusieurs méthodes d'accès aux données scientifiques issues du portail **HAL (Hyper Articles en Ligne)**. Il permet d'extraire, analyser, visualiser et diffuser les résultats de manière automatique et reproductible.
 
