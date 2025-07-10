@@ -23,7 +23,7 @@ Ce dossier contient une série de **workflows KNIME** destinés à extraire, tra
 
 ---
 
-##  Workflows disponibles
+## Workflows disponibles
 
 | N° | Nom du workflow                   | Source de données             | Méthode d’extraction         |
 |----|----------------------------------|-------------------------------|-------------------------------|
@@ -35,7 +35,7 @@ Ce dossier contient une série de **workflows KNIME** destinés à extraire, tra
 
 ---
 
-##  Étapes communes à tous les workflows
+## Étapes communes à tous les workflows
 
 Chaque workflow suit un processus en 5 étapes standardisées :
 
@@ -56,7 +56,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Objectifs
+## Objectifs
 
 - Exploiter les métadonnées scientifiques HAL (titre, auteurs, affiliations…)
 - Intégrer plusieurs sources : **API HAL**, fichiers locaux, connecteurs externes
@@ -65,7 +65,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Méthodes d’extraction prises en charge
+## Méthodes d’extraction prises en charge
 
 - **Fichiers locaux** (`Excel`, `CSV`, `JSON`)  
   → via les lecteurs KNIME natifs
@@ -84,7 +84,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Formats d’export disponibles
+## Formats d’export disponibles
 
 | Type de sortie   | Format                     |
 |------------------|----------------------------|
@@ -95,7 +95,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Paramètres personnalisables
+## Paramètres personnalisables
 
 - URL de l’API HAL (avec filtres, pagination…)
 - Format de sortie (`json`, `tei`, `xml`)
@@ -106,7 +106,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Dépendances KNIME
+## Dépendances KNIME
 
 - **KNIME REST Client Extension**
 - **KNIME JSON/XML Processing**
@@ -117,7 +117,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Cas d’usage
+## Cas d’usage
 
 - Suivi automatique de la **production scientifique** d’un laboratoire
 - Génération de **rapports mensuels** ou tableaux de bord
@@ -126,7 +126,7 @@ Chaque workflow suit un processus en 5 étapes standardisées :
 
 ---
 
-##  Contributeurs & Licence
+## Contributeurs & Licence
 
 Ce projet est **open-source** et peut être adapté à d'autres dépôts comme **Zenodo**, **OpenAIRE**, etc.  
 **Contributions, retours et améliorations sont les bienvenus.**
