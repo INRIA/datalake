@@ -16,27 +16,19 @@ Le script produit un tableau comparatif des performances des méthodes ainsi qu�
 
 2. **RapidFuzz token_sort_ratio**  
    Algorithme de comparaison de chaînes basé sur la distance de Levenshtein avec tri des tokens.  
-   [Documentation RapidFuzz token_sort_ratio](https://maxbachmann.github.io/RapidFuzz/process.html#rapidfuzz.process.extractOne)
+   [Documentation RapidFuzz token_sort_ratio](https://rapidfuzz.github.io/RapidFuzz/)
 
-3. **RapidFuzz token_set_ratio**  
-   Similarité basée sur l’intersection des tokens (ensembles).  
-   [Documentation RapidFuzz token_set_ratio](https://maxbachmann.github.io/RapidFuzz/process.html#rapidfuzz.process.extractOne)
-
-4. **RapidFuzz max(token_sort_ratio, token_set_ratio)**  
-   Combinaison prenant le score maximum entre les deux métriques RapidFuzz précédentes.
-
-5. **FAISS + TF-IDF + Distance Euclidienne (L2)**  
+3. **FAISS + TF-IDF **  
    Recherche rapide de voisins proches dans un espace vectoriel TF-IDF via la bibliothèque FAISS.  
-   [Documentation FAISS (Facebook AI Similarity Search)](https://github.com/facebookresearch/faiss) | [Distance Euclidienne](https://en.wikipedia.org/wiki/Euclidean_distance)
+   [Documentation FAISS (Facebook AI Similarity Search)](https://python.langchain.com/docs/integrations/retrievers/tf_idf/) 
 
-6. **LSA (Latent Semantic Analysis) + Similarité Cosinus**  
+4. **LSA (Latent Semantic Analysis) **  
    Réduction de dimension TF-IDF via décomposition SVD suivie d’une mesure de similarité cosinus.  
-   [Documentation TruncatedSVD (scikit-learn)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html) | [Latent Semantic Analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis)
+   [Documentation TruncatedSVD (scikit-learn)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html) 
 
-7. **FastText + Similarité Cosinus**  
+5. **FastText**  
    Modèle d’embeddings de mots entraîné sur les titres, avec calcul de la moyenne des vecteurs mots par titre, suivi d’une similarité cosinus.  
-   [Documentation FastText (Gensim)](https://radimrehurek.com/gensim/models/fasttext.html) | [Documentation Similarité Cosinus](https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity)
-
+   [Documentation FastText (Gensim)](https://radimrehurek.com/gensim/models/fasttext.html) 
 ---
 
 ## Usage
