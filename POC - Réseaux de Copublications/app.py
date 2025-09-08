@@ -7,9 +7,9 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import numpy as np
 
-# -------------------
+# -----------------
 # Page config
-# -------------------
+# -----------------
 st.set_page_config(page_title="Copublications Inria-Italie", layout="wide")
 
 # -------------------
