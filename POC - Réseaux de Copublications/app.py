@@ -12,8 +12,7 @@ import numpy as np
 # -------------------
 st.set_page_config(page_title="Copublications Inria-Italie", layout="wide")
 
-# -------------------
-# Load data
+# ---------------# Load data
 # -------------------
 @st.cache_data
 def load_data(path="italy_full_completed_cities_translated_with_coords.xlsx"):
