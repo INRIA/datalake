@@ -35,7 +35,7 @@ Le script charge un fichier **Excel** (par défaut : `italy_full_completed_citie
 - `Organisme_copubliant` : organisme italien associé  
 - `Année` : année de publication  
 - `Equipe` : équipe de recherche Inria  
-- `Latitude`, `Longitude` : coordonnées géographiques (pour la carte)  
+- `Latitude`, `Longitude` : coordonnées géographiques pour la carte
 - `Mots-cles` *(optionnel)* : mots-clés associés aux publications  
 
 ---
