@@ -1,0 +1,62 @@
+# Comparaison Multi-Méthodes de Similarité de Titres
+
+## Description
+
+Ce projet propose un script Python permettant de comparer et d’évaluer plusieurs méthodes de similarité textuelle appliquées à deux ensembles de titres de publications scientifiques. L’objectif est d’identifier, pour chaque titre du premier jeu de données, les titres les plus similaires dans le second, en utilisant différentes techniques d’extraction et de mesure de similarité.
+
+Le script produit un tableau comparatif des performances des méthodes ainsi qu’un graphique illustrant le nombre de correspondances trouvées au-dessus d’un seuil donné.
+
+---
+
+## Méthodes Implémentées
+
+1. **TF-IDF + Similarité Cosinus**  
+   Vectorisation TF-IDF des titres suivie d’un calcul de similarité cosinus.  
+   [Documentation TF-IDF (scikit-learn)](https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting) | [Documentation Similarité Cosinus](https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity)
+
+2. **RapidFuzz token_sort_ratio**  
+   Algorithme de comparaison de chaînes basé sur la distance de Levenshtein avec tri des tokens.  
+   [Documentation RapidFuzz token_sort_ratio](https://rapidfuzz.github.io/RapidFuzz/)
+
+3. **FAISS + TF-IDF **  
+   Recherche rapide de voisins proches dans un espace vectoriel TF-IDF via la bibliothèque FAISS.  
+   [Documentation FAISS (Facebook AI Similarity Search)](https://python.langchain.com/docs/integrations/retrievers/tf_idf/) 
+
+4. **LSA (Latent Semantic Analysis) **  
+   Réduction de dimension TF-IDF via décomposition SVD suivie d’une mesure de similarité cosinus.  
+   [Documentation TruncatedSVD (scikit-learn)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html) 
+
+5. **FastText**  
+   Modèle d’embeddings de mots entraîné sur les titres, avec calcul de la moyenne des vecteurs mots par titre, suivi d’une similarité cosinus.  
+   [Documentation FastText (Gensim)](https://radimrehurek.com/gensim/models/fasttext.html) 
+---
+
+## Usage
+
+1. Modifier les chemins des fichiers Excel `path_doc1` et `path_doc2` dans le script pour pointer vers vos fichiers d’entrée.
+2. Ajuster le seuil de similarité (`score_threshold`) si nécessaire.
+3. Exécuter le script Python.  
+4. Résultats :
+   - Fichiers Excel de correspondances par méthode (optionnel, à adapter dans le script).
+   - Tableau récapitulatif des performances par méthode (affiché dans la console).
+   - Graphique des nombres de matches par méthode.
+
+---
+
+## Prérequis
+
+- Python 3.7 ou plus
+- Librairies Python : `pandas`, `numpy`, `scikit-learn`, `rapidfuzz`, `faiss-cpu`, `gensim`, `matplotlib`
+
+Installation rapide via pip :
+
+```bash
+pip install pandas numpy scikit-learn rapidfuzz faiss-cpu gensim matplotlib
+
+## Limitations et recommandations
+
+Les seuils de similarité sont ajustables en fonction de la qualité des données.
+
+Les méthodes basées sur FastText nécessitent un temps d’entraînement supplémentaire.
+
+FAISS est optimisé pour les grands volumes de données, mais peut demander une configuration spécifique selon le système.
