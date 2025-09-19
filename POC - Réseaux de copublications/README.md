@@ -1,4 +1,4 @@
-# 📊 Copublications Inria-Italie
+# 📊 Copublications Inria (Sophia et Bordeaux)
 
 Application **Streamlit** interactive permettant d’explorer et de visualiser les **copublications scientifiques** entre **Inria Sophia Antipolis** et des organismes/équipes italiennes.  
 
