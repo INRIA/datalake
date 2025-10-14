@@ -55,48 +55,118 @@ hal_col, auteurs_fr_col, auteurs_copub_col = "HalID", "Auteurs_FR", "Auteurs_cop
 ville_col, org_col, annee_col, equipe_col, centre_col, pays_col = "Ville", "Organisme_copubliant", "Année", "Equipe", "Centre", "Pays"
 
 # -------------------
-# Sidebar filtres
+# Sidebar filtres (version simplifiée & réactive)
 # -------------------
 with st.sidebar:
     try:
         st.image("logo.png", use_container_width=True)
     except:
         st.caption("Logo manquant")
-    
-    st.markdown("<br>", unsafe_allow_html=True)    #espace
-    st.markdown("### DATALAKE")
-    st.markdown("<br>", unsafe_allow_html=True)
-    centres = st.multiselect("Centre", sorted(df[centre_col].dropna().unique()))
-    pays = st.multiselect("Pays", sorted(df[pays_col].dropna().unique()))
-    villes = st.selectbox("Ville", ["Toutes"] + sorted(df[ville_col].dropna().unique()))
-    organismes = st.multiselect("Organismes copubliants", sorted(df[org_col].dropna().unique()))
-    annees = st.multiselect("Années", sorted(df[annee_col].dropna().unique()))
-    equipes = st.multiselect("Équipes", sorted(df[equipe_col].dropna().unique()))
 
     st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Texte en bas du contenu des filtres
+    st.markdown("### DATALAKE")
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # --- Initialisation des clés ---
+    for key in ["centres", "pays", "villes", "organismes", "annees", "equipes"]:
+        if key not in st.session_state:
+            if key == "villes":
+                st.session_state[key] = "Toutes"
+            else:
+                st.session_state[key] = []
+
+    # --- Calcul des options selon sélection en cours ---
+    # 1. Centres (global)
+    centres_opts = sorted(df[centre_col].dropna().unique())
+    st.session_state.centres = st.multiselect(
+        "Centre",
+        centres_opts,
+        default=st.session_state.centres
+    )
+
+    tmp = df.copy()
+    if st.session_state.centres:
+        tmp = tmp[tmp[centre_col].isin(st.session_state.centres)]
+
+    # 2. Pays
+    pays_opts = sorted(tmp[pays_col].dropna().unique())
+    st.session_state.pays = st.multiselect(
+        "Pays",
+        pays_opts,
+        default=[x for x in st.session_state.pays if x in pays_opts]
+    )
+
+    if st.session_state.pays:
+        tmp = tmp[tmp[pays_col].isin(st.session_state.pays)]
+
+    # 3. Villes
+    villes_opts = ["Toutes"] + sorted(tmp[ville_col].dropna().unique())
+    st.session_state.villes = st.selectbox(
+        "Ville",
+        villes_opts,
+        index=villes_opts.index(st.session_state.villes)
+        if st.session_state.villes in villes_opts else 0
+    )
+
+    if st.session_state.villes != "Toutes":
+        tmp = tmp[tmp[ville_col] == st.session_state.villes]
+
+    # 4. Organismes
+    orgs_opts = sorted(tmp[org_col].dropna().unique())
+    st.session_state.organismes = st.multiselect(
+        "Organismes copubliants",
+        orgs_opts,
+        default=[x for x in st.session_state.organismes if x in orgs_opts]
+    )
+
+    if st.session_state.organismes:
+        tmp = tmp[tmp[org_col].isin(st.session_state.organismes)]
+
+    # 5. Années
+    annees_opts = sorted(tmp[annee_col].dropna().unique())
+    st.session_state.annees = st.multiselect(
+        "Années",
+        annees_opts,
+        default=[x for x in st.session_state.annees if x in annees_opts]
+    )
+
+    if st.session_state.annees:
+        tmp = tmp[tmp[annee_col].isin(st.session_state.annees)]
+
+    # 6. Équipes
+    equipes_opts = sorted(tmp[equipe_col].dropna().unique())
+    st.session_state.equipes = st.multiselect(
+        "Équipes",
+        equipes_opts,
+        default=[x for x in st.session_state.equipes if x in equipes_opts]
+    )
+
+    st.markdown("<br>", unsafe_allow_html=True)
     st.caption(
         "Proposé par le groupe **DATALAKE** : Kumar Guha, Daniel Da Silva et Andréa Nebot  \n"
         "à la demande de Luigi Liquori et Maria Kazolea"
     )
-    
+
 # -------------------
-# Filtrage
+# Filtrage final
 # -------------------
-df_filtered = df.copy()
-if centres:
-    df_filtered = df_filtered[df_filtered[centre_col].isin(centres)]
-if pays:
-    df_filtered = df_filtered[df_filtered[pays_col].isin(pays)]
-if villes != "Toutes":
-    df_filtered = df_filtered[df_filtered[ville_col] == villes]
-if organismes:
-    df_filtered = df_filtered[df_filtered[org_col].isin(organismes)]
-if annees:
-    df_filtered = df_filtered[df_filtered[annee_col].isin(annees)]
-if equipes:
-    df_filtered = df_filtered[df_filtered[equipe_col].isin(equipes)]
+def get_filtered_df():
+    tmp = df.copy()
+    if st.session_state.centres:
+        tmp = tmp[tmp[centre_col].isin(st.session_state.centres)]
+    if st.session_state.pays:
+        tmp = tmp[tmp[pays_col].isin(st.session_state.pays)]
+    if st.session_state.villes != "Toutes":
+        tmp = tmp[tmp[ville_col] == st.session_state.villes]
+    if st.session_state.organismes:
+        tmp = tmp[tmp[org_col].isin(st.session_state.organismes)]
+    if st.session_state.annees:
+        tmp = tmp[tmp[annee_col].isin(st.session_state.annees)]
+    if st.session_state.equipes:
+        tmp = tmp[tmp[equipe_col].isin(st.session_state.equipes)]
+    return tmp
+
+df_filtered = get_filtered_df()
 
 # -------------------
 # Fonctions utiles
