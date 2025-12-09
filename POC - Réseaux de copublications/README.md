@@ -1,6 +1,6 @@
-# 📊 Copublications Inria-Italie
+# 📊 Copublications Inria (Sophia et Bordeaux)
 
-Application **Streamlit** interactive permettant d’explorer et de visualiser les **copublications scientifiques** entre **Inria Sophia Antipolis** et des organismes/équipes italiennes.  
+Application **Streamlit** interactive permettant d’explorer et de visualiser les **copublications scientifiques** entre **Inria Sophia Antipolis** ou **Inria Bordeaux** et des organismes/équipes/pays/villes .  
 
 L’interface propose des filtres, des indicateurs clés (KPI), des graphiques, un réseau de copublications et une carte interactive des collaborations.
 
@@ -15,7 +15,7 @@ L’interface propose des filtres, des indicateurs clés (KPI), des graphiques, 
   - Génération d’un nuage de mots (WordCloud) à partir des mots-clés.
 
 - **Réseau de copublications**
-  - Graphe interactif représentant les liens entre auteurs Inria, copubliants italiens et villes.
+  - Graphe interactif représentant les liens entre auteurs Inria, copubliants et villes.
 
 - **Carte interactive**
   - Localisation des villes italiennes impliquées dans des copublications.
@@ -26,13 +26,13 @@ L’interface propose des filtres, des indicateurs clés (KPI), des graphiques, 
 
 ## 📂 Données attendues
 
-Le script charge un fichier **Excel** (par défaut : `italy_full_completed_cities_translated_with_coords.xlsx`) contenant les colonnes suivantes :  
+Le script charge un fichier **Excel** (par défaut : `Copubliants_par_auteur_Inria_Bordeaux_Sophia`) contenant les colonnes suivantes :  
 
 - `HalID` : identifiant de la publication  
 - `Auteurs_FR` : auteur Inria  
-- `Auteurs_copubliants` : auteur italien  
+- `Auteurs_copubliants` : auteur dans le monde
 - `Ville_en_fr` : ville (en français)  
-- `Organisme_copubliant` : organisme italien associé  
+- `Organisme_copubliant` : organisme associé  
 - `Année` : année de publication  
 - `Equipe` : équipe de recherche Inria  
 - `Latitude`, `Longitude` : coordonnées géographiques pour la carte
