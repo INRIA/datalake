@@ -1,6 +1,6 @@
 import pandas as pd
 
-CSV_PATH = r"C:\Users\abapst\nb_python\copublication_italie\ITALIE\plotly2\Copublis_Internationales_Inria_nov_2025_complet.csv"
+CSV_PATH = r"/workspaces/datalake/POC_V2 - Réseaux de copublications/plotly2/Copublis_Internationales_Inria_nov_2025_complet.csv"
 
 
 def load_data():
